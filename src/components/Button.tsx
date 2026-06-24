@@ -1,15 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-type ButtonProps = {
+import { ButtonHTMLAttributes } from "react";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   href?: string;
   variant?: "primary" | "secondary" | "dark" | "ghost";
-  type?: "button" | "submit";
-};
+}
 
-export function Button({ children, href, variant = "primary", type = "button" }: ButtonProps) {
-  const className = `btn btn-${variant}`;
+export function Button({ children, href, variant = "primary", className: customClass = "", ...props }: ButtonProps) {
+  const className = `btn btn-${variant} ${customClass}`.trim();
 
   if (href) {
     return (
@@ -21,7 +22,7 @@ export function Button({ children, href, variant = "primary", type = "button" }:
   }
 
   return (
-    <button className={className} type={type}>
+    <button className={className} {...props}>
       {children}
       <ArrowRight size={18} />
     </button>

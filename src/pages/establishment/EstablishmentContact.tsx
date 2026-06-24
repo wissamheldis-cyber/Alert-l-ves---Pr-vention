@@ -1,12 +1,8 @@
-import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
-import { establishmentNav } from "../../data/content";
 
 export function EstablishmentContact() {
   return (
-    <div className="app-shell">
-      <Header nav={establishmentNav} />
-
+    <>
       <main className="section container">
         <div className="split">
           <div className="split-dark">
@@ -42,6 +38,6 @@ export function EstablishmentContact() {
           </div>
         </div>
       </main>
-    </div>
+    </>
   );
 }

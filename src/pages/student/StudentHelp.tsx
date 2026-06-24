@@ -1,17 +1,15 @@
-import { Header } from "../../components/Header";
 import { HelpCTA } from "../../components/HelpCTA";
-import { studentNav, helpContacts } from "../../data/content";
+import { helpContacts } from "../../data/content";
 import { Helmet } from "react-helmet-async";
 import { Phone, CheckCircle2 } from "lucide-react";
 
 export function StudentHelp() {
   return (
-    <div className="app-shell animate-fade-in">
+    <>
       <Helmet>
         <title>Besoin d'aide — Alert’Élèves</title>
         <meta name="description" content="Découvrez vers qui vous tourner si vous avez besoin de conseils ou d'aide en urgence." />
       </Helmet>
-      <Header nav={studentNav} />
 
       <main>
         <section className="container hero" style={{ minHeight: "auto", paddingBottom: "40px" }}>
@@ -81,6 +79,6 @@ export function StudentHelp() {
           <HelpCTA />
         </section>
       </main>
-    </div>
+    </>
   );
 }

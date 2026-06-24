@@ -1,18 +1,16 @@
-import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import { IconCard } from "../../components/IconCard";
 import { ProofBand } from "../../components/ProofBand";
-import { establishmentNav, establishmentTiles, modules } from "../../data/content";
+import { establishmentTiles, modules } from "../../data/content";
 import { Helmet } from "react-helmet-async";
 
 export function EstablishmentHome() {
   return (
-    <div className="app-shell animate-fade-in">
+    <>
       <Helmet>
         <title>Espace Établissement — Alert’Élèves</title>
         <meta name="description" content="Découvrez les programmes de prévention, ressources et actualités destinés aux professionnels et établissements scolaires." />
       </Helmet>
-      <Header nav={establishmentNav} ctaHref="/etablissement/contact" ctaLabel="Demander une intervention" />
 
       <main>
         <section className="container hero">
@@ -59,6 +57,6 @@ export function EstablishmentHome() {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }

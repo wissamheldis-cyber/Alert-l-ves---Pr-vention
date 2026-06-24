@@ -1,12 +1,8 @@
-import { Header } from "../../components/Header";
 import { NewsList } from "../../components/NewsList";
-import { establishmentNav } from "../../data/content";
 
 export function EstablishmentNews() {
   return (
-    <div className="app-shell">
-      <Header nav={establishmentNav} ctaHref="/etablissement/contact" ctaLabel="Demander une intervention" />
-
+    <>
       <main className="section container">
         <div className="section-head">
           <div>
@@ -27,6 +23,6 @@ export function EstablishmentNews() {
         </div>
         <NewsList />
       </main>
-    </div>
+    </>
   );
 }

@@ -1,19 +1,17 @@
-import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import { HelpCTA } from "../../components/HelpCTA";
 import { IconCard } from "../../components/IconCard";
 import { StudentProofBand } from "../../components/StudentProofBand";
-import { studentNav, studentThemes, quizzes } from "../../data/content";
+import { studentThemes, quizzes } from "../../data/content";
 import { Helmet } from "react-helmet-async";
 
 export function StudentHome() {
   return (
-    <div className="app-shell animate-fade-in">
+    <>
       <Helmet>
         <title>Espace Élève — Alert’Élèves</title>
         <meta name="description" content="Accède à des ressources courtes, des quiz et trouve de l'aide rapidement sur les nouveaux usages à risque." />
       </Helmet>
-      <Header nav={studentNav} />
 
       <main>
         <section className="container hero">
@@ -61,6 +59,6 @@ export function StudentHome() {
           <HelpCTA />
         </section>
       </main>
-    </div>
+    </>
   );
 }

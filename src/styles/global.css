@@ -666,6 +666,16 @@ h3 {
   color: rgba(255,255,255,.72);
 }
 
+.choice-card.red-choice {
+  background: linear-gradient(160deg, var(--ae-red), var(--ae-red-dark));
+  color: white;
+  border-color: rgba(255,255,255,.12);
+}
+
+.choice-card.red-choice p {
+  color: rgba(255,255,255,.8);
+}
+
 .page-label {
   margin: 14px 0 0;
   color: var(--ae-muted-2);

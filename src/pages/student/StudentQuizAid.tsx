@@ -1,13 +1,10 @@
-import { Header } from "../../components/Header";
 import { HelpCTA } from "../../components/HelpCTA";
 import { Button } from "../../components/Button";
-import { quizzes, studentNav } from "../../data/content";
+import { quizzes } from "../../data/content";
 
 export function StudentQuizAid() {
   return (
-    <div className="app-shell">
-      <Header nav={studentNav} />
-
+    <>
       <main className="section container">
         <section className="card" style={{ marginBottom: 28, background: "linear-gradient(135deg, #fff, #fff7f7)" }}>
           <div className="section-head" style={{ marginBottom: 0 }}>
@@ -32,9 +29,9 @@ export function StudentQuizAid() {
                     <Icon size={21} />
                   </span>
                   <h3 className="card-title">{quiz.title}</h3>
-                  <p className="muted">{quiz.questions}</p>
+                  <p className="muted">{quiz.questionsCount}</p>
                 </div>
-                <Button variant="dark">Commencer</Button>
+                <Button href={`/eleve/quiz/${quiz.id}`} variant="dark">Commencer</Button>
               </article>
             );
           })}
@@ -44,6 +41,6 @@ export function StudentQuizAid() {
           <HelpCTA />
         </section>
       </main>
-    </div>
+    </>
   );
 }

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import React, { useState, MouseEvent, useRef } from "react";
 
-function ParallaxCard({ to, isDark, icon: Icon, title, text, onNavigate }: any) {
+function ParallaxCard({ to, theme, icon: Icon, title, text, onNavigate }: any) {
   const [transform, setTransform] = useState("perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)");
   const [glare, setGlare] = useState({ x: 50, y: 50, opacity: 0 });
   const cardRef = useRef<HTMLDivElement>(null);
@@ -37,7 +37,7 @@ function ParallaxCard({ to, isDark, icon: Icon, title, text, onNavigate }: any) 
       ref={cardRef}
       role="button"
       tabIndex={0}
-      className={`choice-card ${isDark ? "dark-choice" : ""}`}
+      className={`choice-card ${theme === "dark" ? "dark-choice" : theme === "red" ? "red-choice" : ""}`}
       style={{ transform, transition: "transform 0.15s ease-out", position: "relative" }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -61,12 +61,23 @@ function ParallaxCard({ to, isDark, icon: Icon, title, text, onNavigate }: any) 
           <Icon size={24} />
         </span>
         <h2 style={{ marginTop: 22 }}>{title}</h2>
-        <p className={!isDark ? "muted" : ""}>{text}</p>
+        <p className={theme === "white" ? "muted" : ""}>{text}</p>
       </div>
-      <span className="arrow" style={{ position: "relative", zIndex: 1 }}>
-        Entrer
-        <ArrowRight size={20} />
-      </span>
+      <div style={{ marginTop: "32px", display: "flex", justifyContent: "flex-start", position: "relative", zIndex: 1 }}>
+        {theme === "white" ? (
+          <span className="btn btn-dark" style={{ pointerEvents: "none" }}>
+            Entrer <ArrowRight size={20} />
+          </span>
+        ) : theme === "red" ? (
+          <span className="btn btn-secondary" style={{ pointerEvents: "none", color: "var(--ae-red)", border: "none", background: "white" }}>
+            Entrer <ArrowRight size={20} />
+          </span>
+        ) : (
+          <span className="arrow">
+            Entrer <ArrowRight size={20} />
+          </span>
+        )}
+      </div>
     </div>
   );
 }
@@ -103,15 +114,15 @@ export function GatePage() {
         <div className="choice-grid">
           <ParallaxCard
             to="/etablissement"
-            isDark={false}
+            theme="red"
             icon={Building2}
-            title="Espace établissement & adultes"
-            text="Programmes, documents, actualités et demande d’intervention pour votre établissement."
+            title="Espace établissement"
+            text="Programmes, documents, actualités et demande d’intervention."
             onNavigate={handleNavigate}
           />
           <ParallaxCard
             to="/eleve"
-            isDark={true}
+            theme="white"
             icon={Users}
             title="Espace élèves"
             text="Ressources, quiz, contenus courts et outils pour comprendre et agir."

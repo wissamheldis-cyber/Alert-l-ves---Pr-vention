@@ -1,13 +1,9 @@
-import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import { ModuleList } from "../../components/ModuleList";
-import { establishmentNav } from "../../data/content";
 
 export function EstablishmentInterventions() {
   return (
-    <div className="app-shell">
-      <Header nav={establishmentNav} ctaHref="/etablissement/contact" ctaLabel="Demander une intervention" />
-
+    <>
       <main>
         <section className="container section">
           <div className="section-head">
@@ -50,6 +46,6 @@ export function EstablishmentInterventions() {
           <ModuleList />
         </section>
       </main>
-    </div>
+    </>
   );
 }

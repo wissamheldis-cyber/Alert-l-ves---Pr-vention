@@ -1,12 +1,8 @@
-import { Header } from "../../components/Header";
 import { DocumentList } from "../../components/DocumentList";
-import { establishmentNav } from "../../data/content";
 
 export function EstablishmentDocuments() {
   return (
-    <div className="app-shell">
-      <Header nav={establishmentNav} ctaHref="/etablissement/contact" ctaLabel="Demander une intervention" />
-
+    <>
       <main className="section container">
         <div className="section-head">
           <div>
@@ -20,6 +16,6 @@ export function EstablishmentDocuments() {
         </div>
         <DocumentList />
       </main>
-    </div>
+    </>
   );
 }
