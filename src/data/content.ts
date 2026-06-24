@@ -37,7 +37,7 @@ export const studentNav = [
   { label: "Accueil", href: "/eleve" },
   { label: "Ressources", href: "/eleve/ressources" },
   { label: "Quiz", href: "/eleve/quiz-aide" },
-  { label: "Aide", href: "/eleve/quiz-aide" }
+  { label: "Aide", href: "/eleve/aide" }
 ];
 
 export const establishmentTiles = [

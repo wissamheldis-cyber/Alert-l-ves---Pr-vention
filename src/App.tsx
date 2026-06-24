@@ -9,6 +9,8 @@ import { StudentHome } from "./pages/student/StudentHome";
 import { StudentResources } from "./pages/student/StudentResources";
 import { StudentQuizAid } from "./pages/student/StudentQuizAid";
 
+import { StudentHelp } from "./pages/student/StudentHelp";
+
 export default function App() {
   return (
     <Routes>
@@ -23,6 +25,7 @@ export default function App() {
       <Route path="/eleve" element={<StudentHome />} />
       <Route path="/eleve/ressources" element={<StudentResources />} />
       <Route path="/eleve/quiz-aide" element={<StudentQuizAid />} />
+      <Route path="/eleve/aide" element={<StudentHelp />} />
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
