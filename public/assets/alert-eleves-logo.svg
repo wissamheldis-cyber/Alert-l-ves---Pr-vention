@@ -1,0 +1,8 @@
+<svg width="240" height="64" viewBox="0 0 240 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alert'Élèves">
+  <path d="M32 4.8L54.8 18V46L32 59.2L9.2 46V18L32 4.8Z" fill="white" stroke="#111111" stroke-width="4"/>
+  <path d="M32 12.5L48.1 21.8V42.2L32 51.5L15.9 42.2V21.8L32 12.5Z" stroke="#111111" stroke-width="2.2"/>
+  <path d="M22.8 32C22.8 27.4 26.1 24 30.2 24C34.4 24 37.5 27.4 41.2 32C37.5 36.6 34.4 40 30.2 40C26.1 40 22.8 36.6 22.8 32Z" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M41.2 32C44.9 27.4 48 24 52.2 24C56.3 24 59.6 27.4 59.6 32C59.6 36.6 56.3 40 52.2 40C48 40 44.9 36.6 41.2 32Z" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(-18.4 0)"/>
+  <text x="74" y="29" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#111111">Alert’Élèves</text>
+  <text x="74" y="46" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="2" fill="#E10600">PRÉVENIR — ÉDUQUER — PROTÉGER</text>
+</svg>

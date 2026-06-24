@@ -1,0 +1,29 @@
+{
+  "name": "alert-eleves-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Base front-end gratuite pour le site Alert'Élèves, prête à améliorer dans Antigravity.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-helmet-async": "^3.0.0",
+    "react-router-dom": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "typescript-eslint": "latest"
+  }
+}
