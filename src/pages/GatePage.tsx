@@ -116,7 +116,7 @@ export function GatePage() {
             to="/etablissement"
             theme="red"
             icon={Building2}
-            title="Espace établissement et parents"
+            title="Espace établissement & parents"
             text="Programmes, documents, actualités et demande d’intervention."
             onNavigate={handleNavigate}
           />
