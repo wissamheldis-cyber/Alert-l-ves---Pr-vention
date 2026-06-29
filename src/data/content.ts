@@ -412,7 +412,7 @@ export const quizzes = [
   {
     id: "proto",
     title: "QUIZ PROTO",
-    questionsCount: "7 questions",
+    questionsCount: "10 questions",
     icon: ShieldCheck,
     summaryPoints: [
       "Le protoxyde d'azote est détourné de son usage légal (médecine/pâtisserie).",
@@ -422,7 +422,7 @@ export const quizzes = [
     ],
     questions: [
       {
-        question: "Le proto, c’est juste du gaz hilarant ? 7 questions pour découvrir ce que personne t’a expliqué.\n\nQ1. Le protoxyde d’azote est utilisé légalement dans quels domaines ?",
+        question: "Le proto, c’est juste du gaz hilarant ? 10 questions pour découvrir ce que personne t’a expliqué.\n\nQ1. Le protoxyde d’azote est utilisé légalement dans quels domaines ?",
         options: [
           "La médecine et la pâtisserie",
           "La médecine et le sport",
@@ -463,7 +463,7 @@ export const quizzes = [
           "Uniquement après 5 ans"
         ],
         correctAnswer: 1,
-        explanation: "Fourmis dans les pieds, faiblesse, troubles de la marche, ça peut sortir des semaines après, sans que tu fasses le lien."
+        explanation: "Fourmis dans les pieds, faiblesse, troubles de la marche — ça peut sortir des semaines après, sans que tu fasses le lien."
       },
       {
         question: "Q5. À quelle température sort le gaz si on inhale directement depuis une bonbonne ?",
@@ -497,6 +497,39 @@ export const quizzes = [
         ],
         correctAnswer: 2,
         explanation: "Conduire après avoir consommé du proto sera puni comme la conduite sous stupéfiants."
+      },
+      {
+        question: "Q8. Des neurologues français comparent les risques du proto à ceux de :",
+        options: [
+          "L’alcool et le tabac",
+          "La cocaïne et la kétamine",
+          "Le cannabis",
+          "Le café à haute dose"
+        ],
+        correctAnswer: 1,
+        explanation: "Protoside et les neurologues du CHU Lille comparent les dommages nerveux du proto à ceux de la cocaïne ou de la kétamine. Un gaz de cuisine."
+      },
+      {
+        question: "Q9. “Prendre des compléments de B12 compense les effets du proto.” C’est :",
+        options: [
+          "Vrai",
+          "Vrai seulement à forte dose",
+          "Faux — le proto bloque la B12, les comprimés servent à rien",
+          "Vrai si on arrête pendant une semaine"
+        ],
+        correctAnswer: 2,
+        explanation: "C’est un seau percé. Tu peux verser autant d’eau que tu veux, tant que le trou est là, ça sert à rien."
+      },
+      {
+        question: "Q10. Si quelqu’un perd connaissance après avoir inhalé du proto, quel est le premier geste ?",
+        options: [
+          "Lui donner de l’eau",
+          "Le secouer pour le réveiller",
+          "Vérifier qu’il respire",
+          "Attendre que ça passe"
+        ],
+        correctAnswer: 2,
+        explanation: "Vérifier la respiration, puis PLS si inconscient, puis appeler le 15 ou 112. Ces trois gestes dans cet ordre peuvent sauver une vie."
       }
     ]
   }
