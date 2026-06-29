@@ -27,13 +27,39 @@
             height: 100%;
             font-family: 'Outfit', system-ui, sans-serif;
             color: var(--ae-text);
-            background:
-                radial-gradient(circle at 76% 20%, rgba(225, 6, 0, 0.04), transparent 35%),
-                linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-            overflow: hidden;
+            /* Dark background for the room */
+            background-color: #0b0b0b;
+            background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000 100%);
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+        }
+
+        .presentation-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem; /* space around the screen */
+            box-sizing: border-box;
+        }
+
+        .screen-frame {
+            width: 100%;
+            max-width: 1440px;
+            aspect-ratio: 16 / 9;
+            max-height: calc(100vh - 4rem);
+            /* Light gradient matching the site for the screen */
+            background:
+                radial-gradient(circle at 76% 20%, rgba(225, 6, 0, 0.04), transparent 35%),
+                linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            border-radius: 24px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
         }
 
         #presentation {
@@ -41,6 +67,7 @@
             height: 100%;
             position: relative;
             cursor: pointer;
+            flex-grow: 1;
         }
 
         .slide {
@@ -189,7 +216,7 @@
 
         /* Navigation controls */
         .controls {
-            position: fixed;
+            position: absolute; /* absolute to the screen-frame */
             bottom: 2rem;
             right: 2rem;
             z-index: 100;
@@ -227,10 +254,10 @@
         }
 
         .progress-bar {
-            position: fixed;
+            position: absolute; /* absolute to the screen-frame */
             bottom: 0;
             left: 0;
-            height: 4px;
+            height: 6px; /* slightly thicker */
             background: linear-gradient(90deg, var(--ae-red), var(--ae-red-dark));
             width: 0%;
             transition: width 0.3s ease;
@@ -240,9 +267,11 @@
 </head>
 <body>
 
-    <div class="progress-bar" id="progress"></div>
+<div class="presentation-wrapper">
+    <div class="screen-frame">
+        <div class="progress-bar" id="progress"></div>
 
-    <div id="presentation">
+        <div id="presentation">
         
         <!-- SLIDE 1 -->
         <div class="slide active">
@@ -375,12 +404,15 @@
             </div>
         </div>
 
-    </div>
+    </div> <!-- /#presentation -->
 
     <div class="controls">
         <button class="control-btn" id="prevBtn" title="Précédent">&larr;</button>
         <button class="control-btn" id="nextBtn" title="Suivant">&rarr;</button>
     </div>
+
+    </div> <!-- /.screen-frame -->
+</div> <!-- /.presentation-wrapper -->
 
     <script>
         const slides = document.querySelectorAll('.slide');
