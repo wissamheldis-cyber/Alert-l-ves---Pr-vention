@@ -14,7 +14,7 @@ export function HelpCTA() {
             Tu n’es pas seul. Des professionnels et des adultes de confiance peuvent t’écouter.
           </p>
         </div>
-        <Button href="/eleve/quiz-aide" variant="secondary">
+        <Button href="/eleve/aide" variant="secondary">
           Accéder à l’aide
         </Button>
       </div>
