@@ -43,21 +43,21 @@ export function StudentResources() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 24 }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8, fontWeight: 600 }}>
-                <Phone size={18} className="red" /> Drogues Info Service
+                <span style={{ fontSize: "1.2rem" }}>🚨</span> Urgences
               </div>
-              <p style={{ margin: 0, color: "var(--ae-text)" }}>0 800 23 13 13<br/>(gratuit, anonyme, 8h-2h)</p>
-              <a href="https://www.drogues-info-service.fr" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", marginTop: 8, color: "var(--ae-red)", fontWeight: 500, textDecoration: "underline" }}>
-                Trouver un centre près de chez moi
-              </a>
+              <p style={{ margin: 0, color: "var(--ae-text)", fontWeight: 500 }}>15 (SAMU) ou 112</p>
             </div>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8, fontWeight: 600 }}>
-                <MapPin size={18} className="red" /> CJC
+                <Phone size={18} className="red" /> Drogues Info Service
               </div>
-              <p style={{ margin: 0, color: "var(--ae-text)" }}>Consultations Jeunes Consommateurs<br/>Sans rendez-vous, sans jugement.</p>
-              <a href="https://addictions-france.org/dispositifs/consultations-jeunes-consommateurs-cjc/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", marginTop: 8, color: "var(--ae-red)", fontWeight: 500, textDecoration: "underline" }}>
-                Trouver une consultation près de chez moi
-              </a>
+              <p style={{ margin: 0, color: "var(--ae-text)" }}>0 800 23 13 13<br/>(gratuit, anonyme, 8h-2h)</p>
+            </div>
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8, fontWeight: 600 }}>
+                <Phone size={18} className="red" /> Fil Santé Jeunes
+              </div>
+              <p style={{ margin: 0, color: "var(--ae-text)", fontWeight: 500 }}>0 800 235 236</p>
             </div>
           </div>
         </div>
