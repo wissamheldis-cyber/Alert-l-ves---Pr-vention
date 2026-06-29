@@ -20,9 +20,9 @@ import {
 
 export const brand = {
   name: "Alert’Élèves",
-  signature: "Prévenir — Éduquer — Protéger",
+  signature: "Prévenir - Éduquer - Protéger",
   founder: "A.M.17",
-  mainModule: "Module 01 — Nouveaux usages à risque"
+  mainModule: "Module 01 - Nouveaux usages à risque"
 };
 
 export const establishmentNav = [
@@ -108,21 +108,21 @@ export const documents = [
     icon: Download
   },
   {
-    title: "Fiche pratique — Réagir face à une situation à risque",
+    title: "Fiche pratique - Réagir face à une situation à risque",
     meta: "PDF · 1,1 Mo",
     text: "Repérer, écouter et orienter les élèves.",
     category: "Fiches pratiques",
     icon: Download
   },
   {
-    title: "Cadre juridique — Responsabilités & obligations",
+    title: "Cadre juridique - Responsabilités & obligations",
     meta: "PDF · 1,8 Mo",
     text: "Repères pour les établissements scolaires.",
     category: "Cadre juridique",
     icon: Download
   },
   {
-    title: "Kit d’animation — Module 01",
+    title: "Kit d’animation - Module 01",
     meta: "PDF · 3,7 Mo",
     text: "Supports et déroulé détaillé de l’intervention.",
     category: "Supports d’intervention",
@@ -188,45 +188,45 @@ export const studentResources = [
     icon: Brain,
     content: `Lis ça en premier. Ça t’aidera à comprendre tout le reste.
 
-La dopamine — l’hormone du “recommence”
-Dans ton cerveau il y a une molécule qui s’appelle la dopamine. C’est pas l’hormone du bonheur comme on le croit souvent — c’est l’hormone du “recommence”. Chaque fois que tu fais quelque chose qui te procure du plaisir (manger, scroller, rigoler), ton cerveau libère de la dopamine. Son message c’est pas “c’était bien” — c’est “refais-le”.
+La dopamine - l’hormone du “recommence”
+Dans ton cerveau il y a une molécule qui s’appelle la dopamine. C’est pas l’hormone du bonheur comme on le croit souvent - c’est l’hormone du “recommence”. Chaque fois que tu fais quelque chose qui te procure du plaisir (manger, scroller, rigoler), ton cerveau libère de la dopamine. Son message c’est pas “c’était bien” - c’est “refais-le”.
 
-C’est pour ça que tu relances une partie après une défaite, que tu scrolles TikTok alors que tu voulais juste regarder une vidéo, ou que tu rouvres le frigo sans avoir faim. Ton cerveau a noté ce qui t’a fait du bien, et il te le repropose — automatiquement.
+C’est pour ça que tu relances une partie après une défaite, que tu scrolles TikTok alors que tu voulais juste regarder une vidéo, ou que tu rouvres le frigo sans avoir faim. Ton cerveau a noté ce qui t’a fait du bien, et il te le repropose - automatiquement.
 
-Le frein — le cortex préfrontal
+Le frein - le cortex préfrontal
 Ton cerveau a aussi un frein : le cortex préfrontal. C’est lui qui te permet de réfléchir, de freiner une impulsion, de dire non.
 
 Sauf qu’il est pas terminé avant 25 ans. À l’adolescence, le circuit de la dopamine tourne à plein régime mais le frein est encore en construction.
 
-C’est pas un défaut. C’est pour ça que t’apprends une langue, un sport ou une compétence plus vite maintenant. Mais c’est aussi pour ça que les automatismes — bons ou mauvais — s’installent plus vite.
+C’est pas un défaut. C’est pour ça que t’apprends une langue, un sport ou une compétence plus vite maintenant. Mais c’est aussi pour ça que les automatismes - bons ou mauvais - s’installent plus vite.
 
-L’automatisme — quand c’est plus un choix
+L’automatisme - quand c’est plus un choix
 Quand tu répètes un geste assez souvent, ton cerveau finit par le faire sans que tu y penses. Comme le trajet maison-lycée, ou déverrouiller ton téléphone.
 
-Le problème c’est que ça marche aussi pour les mauvaises habitudes. Et quand tu dois te convaincre que tu gères — souvent, tu gères pas.
+Le problème c’est que ça marche aussi pour les mauvaises habitudes. Et quand tu dois te convaincre que tu gères - souvent, tu gères pas.
 
-Si tu ressens un besoin spécifique dans les mêmes situations (stress, pause, soirée, ennui) — c’est plus un choix. C’est un automatisme.
+Si tu ressens un besoin spécifique dans les mêmes situations (stress, pause, soirée, ennui) - c’est plus un choix. C’est un automatisme.
 
 (Source : Inserm)`
   },
   {
     id: "puff",
     type: "Dossier interactif",
-    title: "PUFF — Les infos essentielles",
+    title: "PUFF - Les infos essentielles",
     duration: "5 min",
     icon: Target,
     content: [
       {
         title: "💨 Ce que tu inhales vraiment",
-        body: "L’aérosol d’une puff, c’est pas de l’air. Il contient plus de 100 substances toxiques et jugées préoccupantes par les autorités sanitaires. Ça touche les poumons et le cœur — qu’il y ait de la nicotine ou pas.\n\n(Source : ANSES, rapport 2026)"
+        body: "L’aérosol d’une puff, c’est pas de l’air. Il contient plus de 100 substances toxiques et jugées préoccupantes par les autorités sanitaires. Ça touche les poumons et le cœur - qu’il y ait de la nicotine ou pas.\n\n(Source : ANSES, rapport 2026)"
       },
       {
         title: "🧠 Ce que ça fait à ton cerveau",
-        body: "Le sel de nicotine d’une puff atteint ton cerveau en 10 à 20 secondes. Il déclenche une libération massive de dopamine — bien plus forte que la nourriture ou un jeu vidéo. Ton cerveau note, enregistre, et crée un automatisme puissant.\n\nLa nicotine peut figer ce circuit. Ton cerveau peut rester câblé comme un cerveau d’ado, même une fois adulte. Elle dégrade ton comportement, ton attention et ta capacité d’apprentissage.\n\nEt pour devenir dépendant, pas besoin d’années. En quelques mois, ton cerveau est accroché.\n\n(Source : Inserm)"
+        body: "Le sel de nicotine d’une puff atteint ton cerveau en 10 à 20 secondes. Il déclenche une libération massive de dopamine - bien plus forte que la nourriture ou un jeu vidéo. Ton cerveau note, enregistre, et crée un automatisme puissant.\n\nLa nicotine peut figer ce circuit. Ton cerveau peut rester câblé comme un cerveau d’ado, même une fois adulte. Elle dégrade ton comportement, ton attention et ta capacité d’apprentissage.\n\nEt pour devenir dépendant, pas besoin d’années. En quelques mois, ton cerveau est accroché.\n\n(Source : Inserm)"
       },
       {
         title: "🎯 Pourquoi c’est pensé pour toi",
-        body: "Les arômes servent à deux choses : donner l’impression que c’est inoffensif, et masquer le goût des produits chimiques. L’OMS a recensé plus de 15 000 arômes différents.\n\nCe produit n’a pas été créé pour aider un fumeur adulte à arrêter. Couleurs pastel, forme discrète, prix entre 10 et 15€ — c’est le budget d’un lycéen. L’OMS a dénoncé cette manœuvre comme clairement destinée aux adolescents.\n\n10-15€ ça a l’air de rien. Mais x4 par mois, c’est 60€ par mois et 720€ par an. Un petit achat devient un abonnement invisible.\n\n(Sources : OMS, OFDT)"
+        body: "Les arômes servent à deux choses : donner l’impression que c’est inoffensif, et masquer le goût des produits chimiques. L’OMS a recensé plus de 15 000 arômes différents.\n\nCe produit n’a pas été créé pour aider un fumeur adulte à arrêter. Couleurs pastel, forme discrète, prix entre 10 et 15€ - c’est le budget d’un lycéen. L’OMS a dénoncé cette manœuvre comme clairement destinée aux adolescents.\n\n10-15€ ça a l’air de rien. Mais x4 par mois, c’est 60€ par mois et 720€ par an. Un petit achat devient un abonnement invisible.\n\n(Sources : OMS, OFDT)"
       },
       {
         title: "⚖️ Ce que dit la loi",
@@ -241,17 +241,17 @@ Si tu ressens un besoin spécifique dans les mêmes situations (stress, pause, s
   {
     id: "proto",
     type: "Dossier interactif",
-    title: "PROTO — Les infos essentielles",
+    title: "PROTO - Les infos essentielles",
     duration: "7 min",
     icon: ShieldCheck,
     content: [
       {
         title: "🔬 C’est quoi le proto",
-        body: "Formule chimique : N₂O. Protoxyde d’azote. Gaz incolore, sans odeur, légèrement sucré. Utilisé par les chirurgiens comme anesthésiant et par les pâtissiers dans les siphons à chantilly.\n\nDeux domaines auxquels on fait confiance — c’est exactement pour ça que personne se méfie.\n\nEn 2017 : petites cartouches de 8g à 2€. En 2025 : bonbonnes de 600g, tanks de 2 kg, goûts fruités, 15-20€. Le même marketing que la puff. Sauf que là c’est un gaz anesthésiant.\n\n(Source : Santé Publique France, 2025)"
+        body: "Formule chimique : N₂O. Protoxyde d’azote. Gaz incolore, sans odeur, légèrement sucré. Utilisé par les chirurgiens comme anesthésiant et par les pâtissiers dans les siphons à chantilly.\n\nDeux domaines auxquels on fait confiance - c’est exactement pour ça que personne se méfie.\n\nEn 2017 : petites cartouches de 8g à 2€. En 2025 : bonbonnes de 600g, tanks de 2 kg, goûts fruités, 15-20€. Le même marketing que la puff. Sauf que là c’est un gaz anesthésiant.\n\n(Source : Santé Publique France, 2025)"
       },
       {
         title: "🧠 Ce que ça fait dans ton corps",
-        body: "Le N₂O remplace l’oxygène dans tes poumons. En même temps, il se fixe sur des récepteurs cérébraux — les mêmes que la morphine — et déclenche de la dopamine. C’est une privation ET une activation du circuit de récompense en même temps.\n\nEn parallèle, le proto détruit la myéline — la gaine protectrice qui entoure tous tes nerfs, comme l’isolant d’un câble électrique. Sans elle, les messages entre ton cerveau et ton corps passent mal, ou plus du tout.\n\nIl bloque aussi la vitamine B12, le carburant de tes nerfs. Elle est toujours là, mais elle marche plus.\n\nPremiers signes : fourmis dans les mains et les pieds, faiblesse musculaire, difficultés à marcher. Ça peut arriver des semaines après — sans que tu fasses le lien.\n\n(Sources : MILDECA, Protoside / CHU Lille, 2025)"
+        body: "Le N₂O remplace l’oxygène dans tes poumons. En même temps, il se fixe sur des récepteurs cérébraux - les mêmes que la morphine - et déclenche de la dopamine. C’est une privation ET une activation du circuit de récompense en même temps.\n\nEn parallèle, le proto détruit la myéline - la gaine protectrice qui entoure tous tes nerfs, comme l’isolant d’un câble électrique. Sans elle, les messages entre ton cerveau et ton corps passent mal, ou plus du tout.\n\nIl bloque aussi la vitamine B12, le carburant de tes nerfs. Elle est toujours là, mais elle marche plus.\n\nPremiers signes : fourmis dans les mains et les pieds, faiblesse musculaire, difficultés à marcher. Ça peut arriver des semaines après - sans que tu fasses le lien.\n\n(Sources : MILDECA, Protoside / CHU Lille, 2025)"
       },
       {
         title: "⚡ Les risques immédiats",
@@ -263,7 +263,7 @@ Si tu ressens un besoin spécifique dans les mêmes situations (stress, pause, s
       },
       {
         title: "💀 Des histoires vraies",
-        body: "Yohan — 19 ans. Trois mois, seulement en soirée. Arrêt cardiaque. Décédé en 2018.\n\nPierre — 24 ans. Quelques bonbonnes le week-end. Paralysé des jambes. Aujourd’hui il fait 40 mètres sans béquilles.\n\nMathis — 19 ans. Piéton sur un passage clouté. Percuté par un conducteur sous proto. Décédé sur place. Il n’avait rien consommé."
+        body: "Yohan - 19 ans. Trois mois, seulement en soirée. Arrêt cardiaque. Décédé en 2018.\n\nPierre - 24 ans. Quelques bonbonnes le week-end. Paralysé des jambes. Aujourd’hui il fait 40 mètres sans béquilles.\n\nMathis - 19 ans. Piéton sur un passage clouté. Percuté par un conducteur sous proto. Décédé sur place. Il n’avait rien consommé."
       },
       {
         title: "🚫 Les mythes",
@@ -274,8 +274,8 @@ Si tu ressens un besoin spécifique dans les mêmes situations (stress, pause, s
         body: "2021 : interdiction de vente aux mineurs. Jamais vraiment appliquée.\n\n2026 : loi RIPOST (adoptée au Sénat le 26 mai 2026, en attente de l’Assemblée) :\nInhaler → 1 an, 3 750€. Transporter → 2 ans, 7 500€. Conduire → 3 ans, 9 000€. Vente aux particuliers → interdite.\n\n(Sources : Sénat, Ministère de l’Intérieur, 2026)"
       },
       {
-        title: "🆘 Urgence — 3 gestes",
-        body: "1. Vérifier qu’il respire — main sur le ventre.\n2. Inconscient mais respire → PLS. Sur le côté, genou plié, main sous la joue, bouche vers le bas.\n3. Appeler le 15 ou 112. Rester en ligne. Rester avec lui.\n\n📞 Drogues Info Service — 0800 23 13 13 (gratuit, anonyme, 8h-2h)\n📍 CJC — Sans rendez-vous, sans jugement → drogues-info-service.fr"
+        title: "🆘 Urgence - 3 gestes",
+        body: "1. Vérifier qu’il respire - main sur le ventre.\n2. Inconscient mais respire → PLS. Sur le côté, genou plié, main sous la joue, bouche vers le bas.\n3. Appeler le 15 ou 112. Rester en ligne. Rester avec lui.\n\n📞 Drogues Info Service - 0800 23 13 13 (gratuit, anonyme, 8h-2h)\n📍 CJC - Sans rendez-vous, sans jugement → drogues-info-service.fr"
       }
     ]
   }
@@ -328,7 +328,7 @@ export const quizzes = [
         explanation: "L’ANSES a identifié 106 substances jugées préoccupantes. Ça touche les poumons et le cœur, même sans nicotine."
       },
       {
-        question: "Q4. Le cortex préfrontal — le “frein” du cerveau — finit de se construire à quel âge ?",
+        question: "Q4. Le cortex préfrontal - le “frein” du cerveau - finit de se construire à quel âge ?",
         options: [
           "16 ans",
           "18 ans",
@@ -358,7 +358,7 @@ export const quizzes = [
           "Remplacer les médicaments anti-tabac"
         ],
         correctAnswer: 2,
-        explanation: "Couleurs pastel, goûts sucrés, prix de 10-15€ — c’est le budget d’un lycéen. L’OMS a dénoncé cette manœuvre comme destinée aux ados."
+        explanation: "Couleurs pastel, goûts sucrés, prix de 10-15€ - c’est le budget d’un lycéen. L’OMS a dénoncé cette manœuvre comme destinée aux ados."
       },
       {
         question: "Q7. En combien de temps peut-on devenir dépendant à la nicotine d’une puff ?",
@@ -460,7 +460,7 @@ export const quizzes = [
           "Uniquement après 5 ans"
         ],
         correctAnswer: 1,
-        explanation: "Fourmis dans les pieds, faiblesse, troubles de la marche — ça peut sortir des semaines après, sans que tu fasses le lien."
+        explanation: "Fourmis dans les pieds, faiblesse, troubles de la marche - ça peut sortir des semaines après, sans que tu fasses le lien."
       },
       {
         question: "Q5. À quelle température sort le gaz si on inhale directement depuis une bonbonne ?",

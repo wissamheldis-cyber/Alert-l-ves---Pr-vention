@@ -97,14 +97,14 @@ export function GatePage() {
   return (
     <main className={`gate animate-fade-in ${exitingTo ? "pointer-events-none" : ""}`}>
       <Helmet>
-        <title>Alert’Élèves — Portail de choix</title>
+        <title>Alert’Élèves - Portail de choix</title>
         <meta name="description" content="Choisissez votre espace Alert’Élèves (Établissements & adultes ou Élèves) pour accéder aux programmes, documents et ressources." />
       </Helmet>
       
       <section className={`gate-card ${exitingTo ? "fade-out" : ""}`} aria-labelledby="gate-title" style={{ transition: "opacity 0.3s ease" }}>
         <div className="gate-logo">
           <img src="/assets/AElogo.png" alt="Alert’Élèves" />
-          <p className="kicker" style={{ marginTop: 24 }}>Prévention — Éducation — Confiance</p>
+          <p className="kicker" style={{ marginTop: 24 }}>Prévention - Éducation - Confiance</p>
           <h1 id="gate-title" className="h2">Bienvenue<span className="red-dot">.</span></h1>
           <p className="lead" style={{ marginInline: "auto", textAlign: "center" }}>
             Choisissez votre espace pour accéder à un contenu adapté à vos besoins.

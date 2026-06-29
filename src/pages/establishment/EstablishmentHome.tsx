@@ -6,14 +6,14 @@ export function EstablishmentHome() {
   return (
     <>
       <Helmet>
-        <title>Espace Établissement — Alert’Élèves</title>
+        <title>Espace Établissement - Alert’Élèves</title>
         <meta name="description" content="Découvrez les programmes de prévention, ressources et actualités destinés aux professionnels et établissements scolaires." />
       </Helmet>
 
       <main>
         <section className="container hero">
           <div className="hero-content">
-            <p className="kicker">Prévention — Éducation — Confiance</p>
+            <p className="kicker">Prévention - Éducation - Confiance</p>
             <h1>
               Prévenir aujourd’hui<span className="red-dot">.</span><br />
               Protéger demain<span className="red-dot">.</span>
@@ -44,13 +44,13 @@ export function EstablishmentHome() {
                 <strong>Alert’Élèves est une structure de prévention qui intervient dans les lycées et collèges de la région parisienne sur les risques liés aux addictions chez les jeunes.</strong>
               </p>
               <p>
-                Le projet est né d’une expérience personnelle. À 17 ans, un diagnostic pulmonaire change ma vision des choses. Mon pneumologue m’explique alors ce que je consomme vraiment — ce que contient une puff, ce qu’elle fait au corps, pourquoi les jeunes sont particulièrement vulnérables. Ce déclic m’a donné une conviction : <em>ces informations, tous les jeunes doivent y avoir accès.</em>
+                Le projet est né d’une expérience personnelle. À 17 ans, un diagnostic pulmonaire change ma vision des choses. Mon pneumologue m’explique alors ce que je consomme vraiment - ce que contient une puff, ce qu’elle fait au corps, pourquoi les jeunes sont particulièrement vulnérables. Ce déclic m’a donné une conviction : <em>ces informations, tous les jeunes doivent y avoir accès.</em>
               </p>
               <p>
-                En parallèle, une plongée dans les stratégies marketing des industriels du tabac et de la cigarette électronique — témoignages de commerciaux, créateurs de contenu, mécanismes de ciblage des adolescents — vient compléter cette compréhension et nourrir le contenu des interventions.
+                En parallèle, une plongée dans les stratégies marketing des industriels du tabac et de la cigarette électronique - témoignages de commerciaux, créateurs de contenu, mécanismes de ciblage des adolescents - vient compléter cette compréhension et nourrir le contenu des interventions.
               </p>
               <p style={{ marginBottom: 0 }}>
-                Alert’Élèves c’est ça. Pas de morale. Pas de jugement. Des faits, des données officielles, et une approche pensée pour vraiment parler aux élèves — pas au-dessus d’eux.
+                Alert’Élèves c’est ça. Pas de morale. Pas de jugement. Des faits, des données officielles, et une approche pensée pour vraiment parler aux élèves - pas au-dessus d’eux.
               </p>
             </div>
 

@@ -22,7 +22,7 @@ export function EstablishmentInterventions() {
             {/* Module Puff */}
             <div className="card" style={{ padding: "2rem", display: "grid", gap: "1.5rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
-                <h2 style={{ margin: 0, fontSize: "1.8rem" }}>Module Puff — Cigarette électronique<span className="red-dot">.</span></h2>
+                <h2 style={{ margin: 0, fontSize: "1.8rem" }}>Module Puff - Cigarette électronique<span className="red-dot">.</span></h2>
               </div>
               
               <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", borderBottom: "1px solid var(--ae-border)", paddingBottom: "1.5rem" }}>
@@ -49,7 +49,7 @@ export function EstablishmentInterventions() {
             {/* Module Proto */}
             <div className="card" style={{ padding: "2rem", display: "grid", gap: "1.5rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
-                <h2 style={{ margin: 0, fontSize: "1.8rem" }}>Module Proto — Protoxyde d’azote<span className="red-dot">.</span></h2>
+                <h2 style={{ margin: 0, fontSize: "1.8rem" }}>Module Proto - Protoxyde d’azote<span className="red-dot">.</span></h2>
               </div>
               
               <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", borderBottom: "1px solid var(--ae-border)", paddingBottom: "1.5rem" }}>

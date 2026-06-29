@@ -7,7 +7,7 @@ export function StudentHome() {
   return (
     <>
       <Helmet>
-        <title>Espace Élève — Alert’Élèves</title>
+        <title>Espace Élève - Alert’Élèves</title>
         <meta name="description" content="Accède à des ressources courtes, des quiz et trouve de l'aide rapidement sur les nouveaux usages à risque." />
       </Helmet>
 

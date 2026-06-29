@@ -11,7 +11,7 @@ export function StudentQuizAid() {
             <p className="kicker">Quiz</p>
             <h1 className="h2">Tester mes connaissances<span className="red-dot">.</span></h1>
             <p className="lead">
-              Des quiz interactifs pour voir si tu connais vraiment ce que tu consommes — ou ce qu’on te cache.
+              Des quiz interactifs pour voir si tu connais vraiment ce que tu consommes - ou ce qu’on te cache.
             </p>
           </div>
         </div>

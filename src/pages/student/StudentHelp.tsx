@@ -5,7 +5,7 @@ export function StudentHelp() {
   return (
     <>
       <Helmet>
-        <title>Contacts utiles — Alert’Élèves</title>
+        <title>Contacts utiles - Alert’Élèves</title>
         <meta name="description" content="Découvrez vers qui vous tourner si vous avez besoin de conseils ou d'aide en urgence." />
       </Helmet>
 
