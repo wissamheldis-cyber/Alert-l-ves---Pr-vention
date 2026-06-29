@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Présentation - Alert’Élèves</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
 
         :root {
-            --bg-color: #0b0b0b;
-            --text-color: #ffffff;
-            --muted-color: rgba(255, 255, 255, 0.7);
-            --red-accent: #e10600;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --ae-white: #ffffff;
+            --ae-paper: #f7f7f5;
+            --ae-border: #dfe2e6;
+            --ae-text: #0d0d0d;
+            --ae-muted: #5f6673;
+            --ae-red: #e10600;
+            --ae-red-dark: #b90000;
+            --ae-black: #0b0b0b;
+
+            --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
         }
 
         body, html {
@@ -21,12 +25,11 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(225, 6, 0, 0.1), transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(225, 6, 0, 0.05), transparent 40%);
-            color: var(--text-color);
+            font-family: 'Outfit', system-ui, sans-serif;
+            color: var(--ae-text);
+            background:
+                radial-gradient(circle at 76% 20%, rgba(225, 6, 0, 0.04), transparent 35%),
+                linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -49,13 +52,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
-            padding: 10%;
+            align-items: center; /* Centering the content horizontally */
+            text-align: center; /* Centering text */
+            padding: 5%;
             box-sizing: border-box;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.6s ease-in-out, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            transform: scale(0.95) translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: scale(0.97) translateY(15px);
             z-index: 1;
         }
 
@@ -66,92 +70,111 @@
             z-index: 10;
         }
 
-        /* Slide Content Styling */
+        h1, h2, h3 {
+            margin: 0;
+        }
+
         h1 {
-            font-size: clamp(3rem, 6vw, 5.5rem);
-            line-height: 1.1;
-            margin: 0 0 1.5rem 0;
+            font-size: clamp(3rem, 6vw, 6rem);
+            line-height: 1;
+            margin-bottom: 1rem;
             font-weight: 800;
-            letter-spacing: -0.05em;
+            letter-spacing: -0.075em;
         }
 
         h2 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin: 0 0 2rem 0;
-            color: var(--text-color);
-            letter-spacing: -0.03em;
-            font-weight: 600;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.06em;
+            font-weight: 800;
         }
 
         .red-dot {
-            color: var(--red-accent);
+            color: var(--ae-red);
         }
 
         p, li {
-            font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+            font-size: clamp(1.4rem, 2vw, 2rem);
             line-height: 1.6;
-            margin-bottom: 1.2rem;
-            color: var(--muted-color);
-            font-weight: 300;
+            margin-bottom: 1rem;
+            color: var(--ae-muted);
+            font-weight: 400;
         }
 
         strong {
-            color: var(--text-color);
-            font-weight: 600;
+            color: var(--ae-text);
+            font-weight: 700;
         }
 
         ul {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 0 auto;
+            text-align: left;
+            display: inline-block; /* to keep it centered but aligned left internally */
         }
 
         li {
             position: relative;
             padding-left: 2rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         li::before {
             content: "→";
             position: absolute;
             left: 0;
-            color: var(--red-accent);
+            color: var(--ae-red);
             font-weight: 800;
         }
 
-        .glass-box {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            padding: 3rem;
-            border-radius: 24px;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            max-width: 1200px;
+        /* Glassmorphism Card like the UX/UI of the site */
+        .card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 26px; /* radius-lg */
+            padding: 4rem;
+            box-shadow: var(--shadow-glass);
+            max-width: 1100px;
             width: 100%;
         }
-
-        /* Specific slide tweaks */
-        .title-slide h1 {
-            color: var(--red-accent);
-        }
         
-        .title-slide p {
-            font-size: 2rem;
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .title-slide .date {
-            color: var(--muted-color);
-            font-size: 1.5rem;
-            margin-top: 2rem;
+        .card.dark {
+            background: linear-gradient(160deg, #0d0d0d, #23282d);
+            color: white;
+            border-color: rgba(255,255,255,.12);
         }
 
+        .card.dark h2 {
+            color: white;
+        }
+
+        .card.dark p, .card.dark li {
+            color: rgba(255,255,255,.72);
+        }
+        
+        .card.dark strong {
+            color: white;
+        }
+
+        .kicker {
+            color: var(--ae-red);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Contacts slide specific */
         .contact-flex {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 4rem;
+            text-align: left;
         }
 
         .qr-code {
@@ -160,8 +183,11 @@
             border-radius: 16px;
             width: 200px;
             height: 200px;
+            box-shadow: var(--shadow-glass);
+            border: 1px solid var(--ae-border);
         }
 
+        /* Navigation controls */
         .controls {
             position: fixed;
             bottom: 2rem;
@@ -169,7 +195,7 @@
             z-index: 100;
             display: flex;
             gap: 1rem;
-            opacity: 0.3;
+            opacity: 0.2;
             transition: opacity 0.3s;
         }
 
@@ -178,9 +204,9 @@
         }
 
         .control-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--ae-border);
+            color: var(--ae-text);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -190,12 +216,14 @@
             align-items: center;
             justify-content: center;
             backdrop-filter: blur(8px);
-            transition: background 0.2s;
+            transition: all 0.2s;
+            box-shadow: var(--shadow-glass);
         }
 
         .control-btn:hover {
-            background: rgba(225, 6, 0, 0.8);
-            border-color: rgba(225, 6, 0, 1);
+            background: white;
+            transform: scale(1.05);
+            color: var(--ae-red);
         }
 
         .progress-bar {
@@ -203,7 +231,7 @@
             bottom: 0;
             left: 0;
             height: 4px;
-            background: var(--red-accent);
+            background: linear-gradient(90deg, var(--ae-red), var(--ae-red-dark));
             width: 0%;
             transition: width 0.3s ease;
             z-index: 100;
@@ -217,38 +245,27 @@
     <div id="presentation">
         
         <!-- SLIDE 1 -->
-        <div class="slide title-slide active">
-            <h1>Alert’Élèves<span class="red-dot">.</span></h1>
-            <h2>Prévention des addictions en milieu scolaire</h2>
-            <p><strong>Anass Abdel Rahman</strong> — Fondateur</p>
-            <p class="date">2 juillet 2026</p>
+        <div class="slide active">
+            <p class="kicker">Alert’Élèves</p>
+            <h1>Prévention des addictions<br>en milieu scolaire<span class="red-dot">.</span></h1>
+            <p style="margin-top: 2rem;"><strong>Anass Abdel Rahman</strong>, Fondateur</p>
+            <p style="font-size: 1.2rem; margin-top: 1rem;">2 juillet 2026</p>
         </div>
 
-        <!-- SLIDE 2 -->
+        <!-- SLIDE 2 (Ancienne slide 3) -->
         <div class="slide">
-            <div class="glass-box">
-                <h2>Qui suis-je<span class="red-dot"> ?</span></h2>
-                <p><strong>Anass, 18 ans.</strong></p>
-                <p>À 17 ans, un diagnostic pulmonaire après 3 ans de puff.</p>
-                <p>Mon pneumologue m’explique ce que je consommais vraiment.</p>
-                <p>Ce déclic m’a donné une conviction : <strong>ces informations, tous les jeunes doivent y avoir accès.</strong></p>
+            <div class="card">
+                <h2>Alert’Élèves, c’est quoi<span class="red-dot"> ?</span></h2>
+                <p>Une structure de prévention qui intervient en collèges et lycées en Île-de-France sur les addictions chez les jeunes.</p>
+                <p style="margin: 2rem 0;"><strong>Pas de morale. Pas de jugement.</strong></p>
+                <p>Des faits, des données officielles, et une approche pensée pour parler aux élèves — <strong>pas au-dessus d’eux.</strong></p>
             </div>
         </div>
 
-        <!-- SLIDE 3 -->
+        <!-- SLIDE 3 (Ancienne slide 4) -->
         <div class="slide">
-            <h2>Alert’Élèves, c’est quoi<span class="red-dot"> ?</span></h2>
-            <p>Une structure de prévention qui intervient en collèges et lycées en Île-de-France sur les addictions chez les jeunes.</p>
-            <br>
-            <p><strong>Pas de morale. Pas de jugement.</strong></p>
-            <br>
-            <p>Des faits, des données officielles, et une approche pensée pour parler aux élèves — <strong>pas au-dessus d’eux.</strong></p>
-        </div>
-
-        <!-- SLIDE 4 -->
-        <div class="slide">
-            <div class="glass-box">
-                <h2>Notre approche en 4 piliers<span class="red-dot">.</span></h2>
+            <h2>Notre approche en 4 piliers<span class="red-dot">.</span></h2>
+            <div style="margin-top: 2rem;">
                 <ul>
                     <li><strong>Contenu sourcé</strong> (ANSES, OFDT, Inserm, OMS, Sénat)</li>
                     <li><strong>Interventions interactives</strong> (questions, mises en situation, déconstruction des idées reçues, Kahoot)</li>
@@ -258,71 +275,88 @@
             </div>
         </div>
 
-        <!-- SLIDE 5 -->
+        <!-- SLIDE 4 (Ancienne slide 5) -->
         <div class="slide">
             <h2>Nos partenaires & soutiens<span class="red-dot">.</span></h2>
-            <ul>
-                <li><strong>Pneumologue personnel</strong> — témoignage vidéo confirmé sur les effets pulmonaires de la puff</li>
-                <li><strong>Protoside (association de neurologues)</strong> — en contact pour le volet proto</li>
-                <li><strong>Hôpital Lariboisière et CHU de Lille</strong> — échanges en cours</li>
-                <li><strong>Préfecture de Police</strong> — autorisation d’utiliser leurs vidéos de sensibilisation officielles</li>
-                <li><strong>DDEC 92</strong> — recommandation aux établissements</li>
-            </ul>
-        </div>
-
-        <!-- SLIDE 6 -->
-        <div class="slide">
-            <div class="glass-box">
-                <h2>Module Puff <span style="font-size: 0.6em; color: var(--muted-color)">(1h30)</span><span class="red-dot">.</span></h2>
-                <p><strong>Public :</strong> collégiens et lycéens</p>
-                <p>Déroulé en 3 actes :</p>
-                <br>
-                <p><strong>Acte 1 — Le cerveau :</strong> dopamine, automatismes, cortex préfrontal, vulnérabilité des ados.</p>
-                <p><strong>Acte 2 — Les faits :</strong> santé (poumons, cœur, cerveau), cadre légal, pression du groupe.</p>
-                <p><strong>Acte 3 — Le marketing :</strong> arômes, ciblage ados, abonnement invisible, environnement.</p>
-                <br>
-                <p><em>Vidéos de professionnels (médecin, policier, commercial) + Kahoot final.</em></p>
-            </div>
-        </div>
-
-        <!-- SLIDE 7 -->
-        <div class="slide">
-            <div class="glass-box">
-                <h2>Module Proto <span style="font-size: 0.6em; color: var(--muted-color)">(1h)</span><span class="red-dot">.</span></h2>
-                <p><strong>Public :</strong> collégiens et lycéens</p>
+            <div style="margin-top: 2rem;">
                 <ul>
-                    <li>Bloc explicatif : N₂O, myéline, dopamine, B12</li>
-                    <li>Scène narrative : parcours de Lucas sur 6 semaines</li>
-                    <li>3 cas réels documentés (Yohan, Pierre, Mathis)</li>
-                    <li>6 mythes déconstruits</li>
-                    <li>Loi RIPOST (Sénat, mai 2026)</li>
-                    <li>Protocole d’urgence (PLS, 15/112)</li>
+                    <li><strong>Pneumologue personnel</strong>, témoignage vidéo confirmé sur les effets pulmonaires de la puff</li>
+                    <li><strong>Protoside (association de neurologues)</strong>, en contact pour le volet proto</li>
+                    <li><strong>Hôpital Lariboisière et CHU de Lille</strong>, échanges en cours</li>
+                    <li><strong>Préfecture de Police</strong>, autorisation d’utiliser leurs vidéos de sensibilisation officielles</li>
+                    <li><strong>DDEC 92</strong>, recommandation aux établissements</li>
                 </ul>
             </div>
         </div>
 
-        <!-- SLIDE 8 -->
+        <!-- SLIDE 5 (Ancienne slide 6) -->
         <div class="slide">
-            <h2>Les deux modules <span style="font-size: 0.6em; color: var(--muted-color)">(2h30)</span><span class="red-dot">.</span></h2>
-            <br>
-            <p>L’intervention complète sur les <strong>deux produits les plus consommés par les jeunes aujourd’hui.</strong></p>
-            <br>
-            <p>Transition fluide entre les deux modules.</p>
-            <p>Un seul intervenant, un format interactif du début à la fin.</p>
+            <div class="card dark">
+                <h2>Module Puff <span style="font-size: 0.6em; font-weight: 400; opacity: 0.7;">(1h30)</span><span class="red-dot">.</span></h2>
+                <p><strong>Public :</strong> collégiens et lycéens</p>
+                <br>
+                <p><strong>Acte 1, Le cerveau :</strong> dopamine, automatismes, cortex préfrontal, vulnérabilité des ados.</p>
+                <p><strong>Acte 2, Les faits :</strong> santé (poumons, cœur, cerveau), cadre légal, pression du groupe.</p>
+                <p><strong>Acte 3, Le marketing :</strong> arômes, ciblage ados, abonnement invisible, environnement.</p>
+                <br>
+                <p style="color: var(--ae-red); font-weight: 600;">Vidéos de professionnels (médecin, policier, commercial) + Kahoot final.</p>
+            </div>
         </div>
 
-        <!-- SLIDE 9 -->
+        <!-- SLIDE 6 (Ancienne slide 7) -->
         <div class="slide">
-            <div class="glass-box">
+            <div class="card dark">
+                <h2>Module Proto <span style="font-size: 0.6em; font-weight: 400; opacity: 0.7;">(1h)</span><span class="red-dot">.</span></h2>
+                <p style="text-align: center;"><strong>Public :</strong> collégiens et lycéens</p>
+                <br>
+                <div style="display: flex; justify-content: center;">
+                    <ul>
+                        <li>Bloc explicatif : N₂O, myéline, dopamine, B12</li>
+                        <li>Scène narrative : parcours de Lucas sur 6 semaines</li>
+                        <li>3 cas réels documentés (Yohan, Pierre, Mathis)</li>
+                        <li>6 mythes déconstruits</li>
+                        <li>Loi RIPOST (Sénat, mai 2026)</li>
+                        <li>Protocole d’urgence (PLS, 15/112)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7 (Ancienne slide 8) -->
+        <div class="slide">
+            <h2>Les deux modules combinés <span style="font-size: 0.6em; font-weight: 400; opacity: 0.7;">(2h30)</span><span class="red-dot">.</span></h2>
+            <div style="margin-top: 2rem;">
+                <p>L’intervention complète sur les <strong>deux produits les plus consommés par les jeunes aujourd’hui.</strong></p>
+                <p>Transition fluide entre les deux modules.</p>
+                <p>Un seul intervenant, un format interactif du début à la fin.</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 8 (Ancienne slide 9) -->
+        <div class="slide">
+            <div class="card">
                 <h2>Tarifs d'intervention<span class="red-dot">.</span></h2>
-                <br>
-                <p style="font-size: 3rem; color: white;"><strong>200€</strong> <span style="font-size: 1.5rem; color: var(--muted-color);">/ intervention</span></p>
-                <br>
-                <ul>
-                    <li>Module Puff seul — <strong>1h30</strong></li>
-                    <li>Module Proto seul — <strong>1h</strong></li>
-                    <li>Les deux modules — <strong>2h30</strong></li>
-                </ul>
+                <p style="font-size: 4rem; color: var(--ae-text); margin: 1rem 0;"><strong>200€</strong></p>
+                <div style="display: flex; justify-content: center; margin-top: 2rem;">
+                    <ul>
+                        <li>Module Puff seul, <strong>1h30</strong></li>
+                        <li>Module Proto seul, <strong>1h</strong></li>
+                        <li>Les deux modules, <strong>2h30</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 9 (NOUVELLE AVANT-DERNIÈRE SLIDE - L'ancienne slide 2) -->
+        <div class="slide">
+            <div class="card">
+                <p class="kicker">Notre histoire</p>
+                <h2>Qui suis-je<span class="red-dot"> ?</span></h2>
+                <p><strong>Anass, 18 ans.</strong></p>
+                <p>À 17 ans, un diagnostic pulmonaire après 3 ans de puff.</p>
+                <p>Mon pneumologue m’explique ce que je consommais vraiment.</p>
+                <p style="margin-top: 2rem;">Ce déclic m’a donné une conviction :</p>
+                <p style="font-size: 1.8rem; color: var(--ae-red); font-weight: 800;">ces informations, tous les jeunes doivent y avoir accès.</p>
             </div>
         </div>
 
@@ -331,12 +365,11 @@
             <div class="contact-flex">
                 <div>
                     <h2>Contact<span class="red-dot">.</span></h2>
-                    <p><strong>Anass Abdel Rahman</strong></p>
+                    <p style="font-size: 2rem;"><strong>Anass Abdel Rahman</strong></p>
                     <p>anassabdelrahman2@gmail.com</p>
-                    <p style="color: var(--red-accent); font-weight: 600;">alerteleves.com</p>
+                    <p style="color: var(--ae-red); font-weight: 800; font-size: 2rem; margin-top: 1rem;">alerteleves.com</p>
                 </div>
                 <div>
-                    <!-- QR Code généré via Google Chart API pointant vers alerteleves.com -->
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://alerteleves.com&color=0b0b0b&bgcolor=ffffff" alt="QR Code" class="qr-code">
                 </div>
             </div>
