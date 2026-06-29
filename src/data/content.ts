@@ -186,6 +186,7 @@ export const studentResources = [
     title: "Comment marche ton cerveau",
     duration: "4 min de lecture",
     icon: Brain,
+    image: "/images/resource_cerveau.jpg",
     content: `Lis ça en premier. Ça t’aidera à comprendre tout le reste.
 
 La dopamine, l’hormone du “recommence”
@@ -215,6 +216,7 @@ Si tu ressens un besoin spécifique dans les mêmes situations (stress, pause, s
     title: "PUFF - Les infos essentielles",
     duration: "5 min",
     icon: Target,
+    image: "/images/resource_puff.jpg",
     content: [
       {
         title: "💨 Ce que tu inhales vraiment",
@@ -244,6 +246,7 @@ Si tu ressens un besoin spécifique dans les mêmes situations (stress, pause, s
     title: "PROTO - Les infos essentielles",
     duration: "7 min",
     icon: ShieldCheck,
+    image: "/images/resource_proto.jpg",
     content: [
       {
         title: "🔬 C’est quoi le proto",

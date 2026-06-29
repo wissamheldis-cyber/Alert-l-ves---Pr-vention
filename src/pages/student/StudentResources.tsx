@@ -21,7 +21,12 @@ export function StudentResources() {
             const Icon = resource.icon;
             return (
               <Link to={`/eleve/ressources/${resource.id}`} key={resource.id} className="card card-link" style={{ minHeight: "auto", padding: 24, gap: 16 }}>
-                <div className="resource-thumb" style={{ marginBottom: 16, background: "linear-gradient(135deg, #1e293b, #0f172a)" }} />
+                <div className="resource-thumb" style={{ 
+                  marginBottom: 16, 
+                  background: resource.image ? `url(${resource.image}) center/cover no-repeat` : "linear-gradient(135deg, #1e293b, #0f172a)",
+                  aspectRatio: "1/1",
+                  borderRadius: "16px"
+                }} />
                 <div>
                   <span className="kicker" style={{ display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 8 }}><Icon size={14} /> {resource.type}</span>
                   <h3 style={{ margin: "0 0 8px" }}>{resource.title}</h3>

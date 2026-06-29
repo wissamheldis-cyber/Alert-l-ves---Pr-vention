@@ -130,8 +130,9 @@ export function StudentResourceActive() {
             <div 
               style={{ 
                 width: "100%", 
-                height: "240px", 
-                background: "linear-gradient(135deg, #e2e8f0, #cbd5e1)", 
+                height: "300px", 
+                background: (resource as any).image ? `url(${(resource as any).image}) center/contain no-repeat` : "linear-gradient(135deg, #e2e8f0, #cbd5e1)", 
+                backgroundColor: "#fff",
                 borderRadius: "var(--radius-lg)",
                 marginBottom: 32,
                 boxShadow: "var(--shadow-soft)"
