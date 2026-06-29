@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Phone, MapPin, Globe } from "lucide-react";
+import { Phone, MapPin, AlertCircle, HeartPulse } from "lucide-react";
 
 export function StudentHelp() {
   return (
@@ -24,60 +24,67 @@ export function StudentHelp() {
         </section>
 
         <section className="section container" style={{ paddingTop: 0 }}>
-          <div className="grid grid-3">
+          <div className="grid grid-2" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+            <article className="card flat" style={{ border: "1px solid var(--ae-border)" }}>
+              <div className="icon-badge red" style={{ marginBottom: 16 }}>
+                <AlertCircle size={22} />
+              </div>
+              <h3 className="card-title">🚨 Urgences</h3>
+              <p className="muted" style={{ marginBottom: 16 }}>
+                15 (SAMU) ou 112
+              </p>
+            </article>
+
             <article className="card flat" style={{ border: "1px solid var(--ae-border)" }}>
               <div className="icon-badge red" style={{ marginBottom: 16 }}>
                 <Phone size={22} />
               </div>
-              <h3 className="card-title">Drogues Info Service</h3>
-              <p className="muted" style={{ marginBottom: 16 }}>
-                Des professionnels à ton écoute pour répondre à tes questions sur n'importe quel produit.
-              </p>
+              <h3 className="card-title">📞 Drogues Info Service</h3>
               <p style={{ fontWeight: 700, fontSize: "1.2rem", color: "var(--ae-red)", margin: 0 }}>
                 0 800 23 13 13
               </p>
-              <p style={{ fontSize: "0.9rem", color: "var(--ae-muted)" }}>Gratuit, anonyme, 8h-2h</p>
+              <p className="muted" style={{ marginTop: 8 }}>
+                Gratuit, anonyme, tous les jours 8h-2h
+              </p>
             </article>
             
             <article className="card flat" style={{ border: "1px solid var(--ae-border)" }}>
               <div className="icon-badge red" style={{ marginBottom: 16 }}>
                 <MapPin size={22} />
               </div>
-              <h3 className="card-title">CJC</h3>
+              <h3 className="card-title">📍 CJC (Consultations Jeunes Consommateurs)</h3>
               <p className="muted" style={{ marginBottom: 16 }}>
-                Consultations Jeunes Consommateurs. Des lieux d'accueil pour faire le point, sans jugement, avec ou sans tes parents.
+                Certaines structures prennent sans rendez-vous, renseignez-vous. Confidentiel, gratuit et des professionnels peuvent t’aider sans jugement. Allez sur le site drogues-info-service ou Maps pour savoir lequel est le plus à proximité de chez vous.
               </p>
-              <a href="https://www.drogues-info-service.fr" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, color: "var(--ae-red)", textDecoration: "underline" }}>
-                Trouver le centre près de chez moi
-              </a>
             </article>
 
             <article className="card flat" style={{ border: "1px solid var(--ae-border)" }}>
               <div className="icon-badge red" style={{ marginBottom: 16 }}>
-                <Globe size={22} />
+                <HeartPulse size={22} />
               </div>
-              <h3 className="card-title">S'informer en ligne</h3>
-              <p className="muted" style={{ marginBottom: 16 }}>
-                Retrouve toutes les informations officielles sur les produits, leurs effets et la loi sur le site officiel.
+              <h3 className="card-title">📞 Fil Santé Jeunes</h3>
+              <p style={{ fontWeight: 700, fontSize: "1.2rem", color: "var(--ae-red)", margin: 0 }}>
+                0 800 235 236
               </p>
-              <a href="https://www.drogues-info-service.fr" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, color: "var(--ae-red)", textDecoration: "underline" }}>
-                drogues-info-service.fr
-              </a>
             </article>
           </div>
         </section>
 
         <section className="section container" style={{ paddingTop: 0 }}>
           <div className="card" style={{ background: "linear-gradient(135deg, #fee2e2, #fecaca)", border: "none" }}>
-            <h3 style={{ color: "#991b1b" }}>En cas d'urgence médicale</h3>
+            <h3 style={{ color: "#991b1b" }}>En cas d’urgence médicale</h3>
             <p style={{ color: "#7f1d1d", marginBottom: 16 }}>
-              Si une personne est inconsciente, fait un malaise ou ne respire plus correctement après avoir consommé un produit :
+              Si une personne est inconsciente, fait un malaise ou ne respire pas normalement après avoir consommé un produit :
             </p>
-            <ul style={{ color: "#7f1d1d", fontWeight: 500, paddingLeft: 20 }}>
-              <li>Vérifie qu'elle respire.</li>
-              <li>Mets-la en Position Latérale de Sécurité (sur le côté).</li>
-              <li>Appelle immédiatement le <strong>15</strong> ou le <strong>112</strong>.</li>
-            </ul>
+            <ol style={{ color: "#7f1d1d", fontWeight: 500, paddingLeft: 20, marginBottom: 16 }}>
+              <li style={{ marginBottom: 8 }}>Vérifie si elle respire normalement.</li>
+              <li style={{ marginBottom: 8 }}>Appelle immédiatement le <strong>15</strong> ou le <strong>112</strong>.</li>
+              <li style={{ marginBottom: 8 }}>Si elle est inconsciente mais respire normalement, mets-la en Position Latérale de Sécurité.</li>
+              <li style={{ marginBottom: 8 }}>Si elle ne respire pas normalement, commence les gestes de réanimation si tu sais les faire, et suis les consignes du médecin régulateur au téléphone.</li>
+            </ol>
+            <p style={{ color: "#7f1d1d", fontWeight: 600, margin: 0 }}>
+              Ne la fais pas boire, ne la fais pas manger, ne la laisse pas seule.
+            </p>
           </div>
         </section>
       </main>
