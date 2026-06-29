@@ -40,7 +40,7 @@ export function EstablishmentInterventions() {
                 <div>
                   <h4 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}><Presentation size={18} /> Format</h4>
                   <p style={{ margin: 0, lineHeight: 1.6, color: "var(--ae-text)" }}>
-                    Exposé interactif, questions, mises en situation, déconstruction des idées reçues et Kahoot final.
+                    Exposé interactif, questions, mises en situation, exercice individuel et collectif, déconstruction des idées reçues et Kahoot final.
                   </p>
                 </div>
               </div>
@@ -53,7 +53,7 @@ export function EstablishmentInterventions() {
               </div>
               
               <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", borderBottom: "1px solid var(--ae-border)", paddingBottom: "1.5rem" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontWeight: 600 }}><Clock size={18} className="red" /> Durée : 1h</div>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontWeight: 600 }}><Clock size={18} className="red" /> Durée : 1h30</div>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontWeight: 600 }}><Users size={18} className="red" /> Public : collégiens et lycéens</div>
               </div>
 
@@ -67,7 +67,7 @@ export function EstablishmentInterventions() {
                 <div>
                   <h4 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}><Presentation size={18} /> Format</h4>
                   <p style={{ margin: 0, lineHeight: 1.6, color: "var(--ae-text)" }}>
-                    Exposé interactif, scènes narratives, déconstruction des mythes, questions et quiz.
+                    Exposé interactif, questions, mises en situation, exercice individuel et collectif, déconstruction des idées reçues et Kahoot final.
                   </p>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export function EstablishmentInterventions() {
                 <div>
                   <h4 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem", color: "white" }}><Presentation size={18} /> Format</h4>
                   <p style={{ margin: 0, lineHeight: 1.6, color: "rgba(255,255,255,0.8)" }}>
-                    Exposé interactif, vidéos, mises en situation, déconstruction des idées reçues, Kahoot.
+                    Exposé interactif, questions, mises en situation, exercice individuel et collectif, déconstruction des idées reçues et Kahoot final.
                   </p>
                 </div>
               </div>
@@ -103,7 +103,7 @@ export function EstablishmentInterventions() {
           </div>
 
           <div className="card" style={{ padding: "3rem", textAlign: "center", borderTop: "4px solid var(--ae-red)" }}>
-            <h3 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>Tarif : sur demande</h3>
+            <h3 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>Tarif sur demande :</h3>
             <p style={{ maxWidth: "600px", margin: "0 auto 2rem auto", color: "var(--ae-text)", lineHeight: 1.6 }}>
               Chaque établissement a des besoins spécifiques. Contactez-nous pour recevoir une proposition détaillée et un devis adapté à votre structure et au nombre d'élèves concernés.
             </p>
