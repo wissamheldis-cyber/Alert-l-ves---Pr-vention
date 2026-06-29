@@ -1,5 +1,5 @@
 import { Button } from "../../components/Button";
-import { ModuleList } from "../../components/ModuleList";
+import { Clock, Users, BookOpen, Presentation } from "lucide-react";
 
 export function EstablishmentInterventions() {
   return (
@@ -15,35 +15,101 @@ export function EstablishmentInterventions() {
                 dans un cadre clair, fiable et adapté au milieu scolaire.
               </p>
             </div>
-            <Button href="/etablissement/contact">Demander une intervention</Button>
           </div>
 
-          <div className="split" style={{ marginBottom: 28 }}>
-            <div className="split-dark">
-              <p className="kicker">Module 01</p>
-              <h2>Nouveaux usages à risque<span className="red-dot">.</span></h2>
-              <p style={{ color: "rgba(255,255,255,.72)" }}>
-                Une approche multidisciplinaire : santé, droit, influence, psychologie,
-                responsabilité et choix éclairés.
-              </p>
-              <div className="actions">
-                <Button href="/etablissement/contact">Programmer ce module</Button>
+          <div style={{ display: "flex", flexDirection: "column", gap: "2rem", marginBottom: "4rem" }}>
+            
+            {/* Module Puff */}
+            <div className="card" style={{ padding: "2rem", display: "grid", gap: "1.5rem" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
+                <h2 style={{ margin: 0, fontSize: "1.8rem" }}>Module Puff — Cigarette électronique<span className="red-dot">.</span></h2>
+              </div>
+              
+              <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", borderBottom: "1px solid var(--ae-border)", paddingBottom: "1.5rem" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontWeight: 600 }}><Clock size={18} className="red" /> Durée : 1h30</div>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontWeight: 600 }}><Users size={18} className="red" /> Public : collégiens et lycéens</div>
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
+                <div>
+                  <h4 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}><BookOpen size={18} /> Contenu</h4>
+                  <p style={{ margin: 0, lineHeight: 1.6, color: "var(--ae-text)" }}>
+                    Mécanismes d’addiction, impacts santé, marketing ciblé, cadre légal, outils concrets.
+                  </p>
+                </div>
+                <div>
+                  <h4 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}><Presentation size={18} /> Format</h4>
+                  <p style={{ margin: 0, lineHeight: 1.6, color: "var(--ae-text)" }}>
+                    Exposé interactif, questions, mises en situation, déconstruction des idées reçues et Kahoot final.
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="split-panel">
-              <h3>Objectifs du module</h3>
-              <div className="grid grid-2" style={{ marginTop: 18 }}>
-                {["Comprendre", "Identifier", "Développer son esprit critique", "Adopter les bons réflexes"].map((item) => (
-                  <article className="card flat" key={item}>
-                    <strong>{item}</strong>
-                    <p className="muted">Un objectif pédagogique clair et mesurable.</p>
-                  </article>
-                ))}
+
+            {/* Module Proto */}
+            <div className="card" style={{ padding: "2rem", display: "grid", gap: "1.5rem" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
+                <h2 style={{ margin: 0, fontSize: "1.8rem" }}>Module Proto — Protoxyde d’azote<span className="red-dot">.</span></h2>
+              </div>
+              
+              <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", borderBottom: "1px solid var(--ae-border)", paddingBottom: "1.5rem" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontWeight: 600 }}><Clock size={18} className="red" /> Durée : 1h</div>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontWeight: 600 }}><Users size={18} className="red" /> Public : collégiens et lycéens</div>
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
+                <div>
+                  <h4 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}><BookOpen size={18} /> Contenu</h4>
+                  <p style={{ margin: 0, lineHeight: 1.6, color: "var(--ae-text)" }}>
+                    Effets sur le système nerveux, risques immédiats et long terme, cadre légal, mythes déconstruits, gestes d’urgence.
+                  </p>
+                </div>
+                <div>
+                  <h4 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}><Presentation size={18} /> Format</h4>
+                  <p style={{ margin: 0, lineHeight: 1.6, color: "var(--ae-text)" }}>
+                    Exposé interactif, scènes narratives, déconstruction des mythes, questions et quiz.
+                  </p>
+                </div>
               </div>
             </div>
+
+            {/* Les deux modules */}
+            <div className="card" style={{ padding: "2rem", display: "grid", gap: "1.5rem", background: "linear-gradient(135deg, #1e293b, #0f172a)", color: "white" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
+                <h2 style={{ margin: 0, fontSize: "1.8rem", color: "white" }}>Les deux modules combinés<span className="red-dot">.</span></h2>
+              </div>
+              
+              <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", borderBottom: "1px solid rgba(255,255,255,0.2)", paddingBottom: "1.5rem" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontWeight: 600 }}><Clock size={18} className="red" /> Durée : 2h30</div>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontWeight: 600 }}><Users size={18} className="red" /> Public : collégiens et lycéens</div>
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
+                <div>
+                  <h4 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem", color: "white" }}><BookOpen size={18} /> Contenu</h4>
+                  <p style={{ margin: 0, lineHeight: 1.6, color: "rgba(255,255,255,0.8)" }}>
+                    Une intervention complète sur les deux produits les plus consommés par les jeunes aujourd’hui.
+                  </p>
+                </div>
+                <div>
+                  <h4 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem", color: "white" }}><Presentation size={18} /> Format</h4>
+                  <p style={{ margin: 0, lineHeight: 1.6, color: "rgba(255,255,255,0.8)" }}>
+                    Exposé interactif, vidéos, mises en situation, déconstruction des idées reçues, Kahoot.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
           </div>
 
-          <ModuleList />
+          <div className="card" style={{ padding: "3rem", textAlign: "center", borderTop: "4px solid var(--ae-red)" }}>
+            <h3 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>Tarif : sur demande</h3>
+            <p style={{ maxWidth: "600px", margin: "0 auto 2rem auto", color: "var(--ae-text)", lineHeight: 1.6 }}>
+              Chaque établissement a des besoins spécifiques. Contactez-nous pour recevoir une proposition détaillée et un devis adapté à votre structure et au nombre d'élèves concernés.
+            </p>
+            <Button href="/etablissement/contact" variant="primary">Demander une intervention</Button>
+          </div>
+
         </section>
       </main>
     </>

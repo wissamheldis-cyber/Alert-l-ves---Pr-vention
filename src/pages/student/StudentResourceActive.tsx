@@ -1,11 +1,13 @@
 import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { studentResources } from "../../data/content";
-import { ArrowLeft, PlayCircle } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowLeft, PlayCircle, ChevronDown, ChevronUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 export function StudentResourceActive() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [openSectionIndex, setOpenSectionIndex] = useState<number | null>(0);
   
   const resource = studentResources.find((r) => r.id === id);
   
@@ -15,6 +17,70 @@ export function StudentResourceActive() {
 
   const Icon = resource.icon;
   const isVideoOrPodcast = resource.type === "Vidéo" || resource.type === "Podcast";
+
+  const renderContent = () => {
+    if (Array.isArray(resource.content)) {
+      return (
+        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          {resource.content.map((section: any, idx: number) => {
+            const isOpen = openSectionIndex === idx;
+            return (
+              <div 
+                key={idx} 
+                style={{ 
+                  border: "1px solid var(--ae-border)",
+                  borderRadius: "var(--radius-md)",
+                  overflow: "hidden"
+                }}
+              >
+                <button
+                  onClick={() => setOpenSectionIndex(isOpen ? null : idx)}
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    padding: "16px 20px",
+                    background: isOpen ? "var(--ae-surface)" : "transparent",
+                    border: "none",
+                    cursor: "pointer",
+                    textAlign: "left",
+                    fontWeight: 600,
+                    fontSize: 16,
+                    color: "var(--ae-title)",
+                    transition: "background 0.2s ease"
+                  }}
+                >
+                  {section.title}
+                  {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                </button>
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      style={{ overflow: "hidden" }}
+                    >
+                      <div style={{ padding: "0 20px 20px", color: "var(--ae-text)", lineHeight: 1.6, whiteSpace: "pre-wrap" }}>
+                        {section.body}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
+        </div>
+      );
+    }
+
+    return (
+      <p style={{ lineHeight: 1.8, fontSize: 18, color: "var(--ae-text)", whiteSpace: "pre-wrap" }}>
+        {resource.content as string}
+      </p>
+    );
+  };
 
   return (
     <main className="section container">
@@ -75,10 +141,7 @@ export function StudentResourceActive() {
 
           <div className="card" style={{ padding: "32px 40px", background: "white" }}>
             <h3 style={{ marginBottom: 24 }}>À propos de ce contenu</h3>
-            <p style={{ lineHeight: 1.8, fontSize: 18, color: "var(--ae-text)" }}>
-              {/* @ts-ignore */}
-              {resource.content}
-            </p>
+            {renderContent()}
           </div>
         </motion.div>
       </div>
