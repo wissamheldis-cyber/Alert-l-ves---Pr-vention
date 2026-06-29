@@ -12,7 +12,7 @@
             --ae-paper: #f7f7f5;
             --ae-border: #dfe2e6;
             --ae-text: #0d0d0d;
-            --ae-muted: #5f6673;
+            --ae-muted: #5f6673; /* we will use darker for bold readability if needed, but text is dark */
             --ae-red: #e10600;
             --ae-red-dark: #b90000;
             --ae-black: #0b0b0b;
@@ -120,13 +120,13 @@
             font-size: clamp(1.4rem, 2vw, 2rem);
             line-height: 1.6;
             margin-bottom: 1rem;
-            color: var(--ae-muted);
-            font-weight: 400;
+            color: var(--ae-text); /* Ensure all text is dark and visible */
+            font-weight: 700; /* EVERYTHING IN BOLD */
         }
 
         strong {
             color: var(--ae-text);
-            font-weight: 700;
+            font-weight: 800; /* Extra bold if already bold */
         }
 
         ul {
@@ -255,7 +255,7 @@
         <div class="slide active">
             <p class="kicker">Alert’Élèves</p>
             <h1>Prévention des addictions<br>en milieu scolaire.</h1>
-            <p style="margin-top: 2rem;"><strong>Anass Abdel Rahman</strong>, Fondateur</p>
+            <p style="margin-top: 2rem;">Anass Abdel Rahman, Fondateur</p>
         </div>
 
         <!-- SLIDE 2 -->
@@ -263,9 +263,9 @@
             <div class="card">
                 <h2>Alert’Élèves, c’est quoi ?</h2>
                 <ul>
-                    <li><strong>Un intervenant de leur âge, passé par là</strong>, pas un adulte qui fait la leçon</li>
-                    <li><strong>Né d’un diagnostic pulmonaire à 17 ans</strong> et de recherches personnelles sur les stratégies marketing de l’industrie</li>
-                    <li><strong>Contenu construit sur les neurosciences</strong> et sourcé exclusivement à partir d’organismes officiels (ANSES, Inserm, OFDT, OMS, Sénat)</li>
+                    <li>Un intervenant de 18 ans, passé par là une parole qui crée une proximité immédiate avec les élèves</li>
+                    <li>Des problèmes pulmonaires à 17 ans qui m'ont fait comprendre que cette puff était un piège pour notre génération</li>
+                    <li>Contenu construit sur les neurosciences et sourcé exclusivement à partir d’organismes officiels (ANSES, Inserm, OFDT, OMS, Sénat)</li>
                 </ul>
             </div>
         </div>
@@ -275,30 +275,48 @@
             <h2>Notre approche en classe</h2>
             <div style="margin-top: 2rem;">
                 <ul>
-                    <li>On commence par le cerveau, <strong>les élèves comprennent le POURQUOI avant de parler de produit</strong></li>
-                    <li><strong>Une question toutes les 4 minutes</strong>, 4 à 6 exercices différents par intervention selon le format</li>
-                    <li><strong>Témoignages vidéo de professionnels intégrés</strong> (médecin, policier, commercial)</li>
-                    <li><strong>Récapitulatif digital et kahoot en fin d’intervention via QR code</strong>, pas de papier</li>
+                    <li>Les élèves découvrent d’abord comment fonctionne leur cerveau en construction, dopamine, automatismes, cortex préfrontal avant d’aborder un seul produit</li>
+                    <li>Une question toutes les 4 minutes, 4 à 6 exercices différents par intervention selon le format</li>
+                    <li>Témoignages vidéo de professionnels intégrés (médecin, policier, commercial)</li>
+                    <li>Récapitulatif digital et kahoot en fin d’intervention via QR code pas de papier</li>
                 </ul>
             </div>
         </div>
 
         <!-- SLIDE 4 -->
         <div class="slide">
-            <div class="card">
+            <div class="card" style="padding: 2rem 4rem;">
                 <h2>Déroulé de l’intervention, 1ère partie</h2>
                 
-                <h3 style="font-size: 2.2rem; color: var(--ae-red); margin: 2rem 0 1rem 0;">Le cerveau (commun puff + proto)</h3>
-                <p>Dopamine, automatismes, cortex préfrontal, mode effort/économie, pression du groupe, les mécanismes qui s’appliquent à toutes les addictions.</p>
-                
-                <h3 style="font-size: 2.2rem; color: var(--ae-red); margin: 2rem 0 1rem 0;">La puff</h3>
-                <p>Santé (poumons, cœur, cerveau), cadre légal, marketing, environnement + vidéos de professionnels (médecin, policier, commercial).</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 2rem; text-align: left;">
+                    <div>
+                        <h3 style="font-size: 2.2rem; color: var(--ae-red); margin-bottom: 1rem;">Le cerveau (commun puff + proto)</h3>
+                        <ul>
+                            <li>Dopamine</li>
+                            <li>Automatismes</li>
+                            <li>Cortex préfrontal</li>
+                            <li>Mode effort/économie</li>
+                            <li>Pression du groupe</li>
+                            <li>Les mécanismes qui s’appliquent à toutes les addictions</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 2.2rem; color: var(--ae-red); margin-bottom: 1rem;">La puff</h3>
+                        <ul>
+                            <li>Santé (poumons, cœur, cerveau)</li>
+                            <li>Cadre légal</li>
+                            <li>Marketing</li>
+                            <li>Environnement</li>
+                            <li>Vidéos de professionnels (médecin, policier, commercial)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- SLIDE 5 -->
         <div class="slide">
-            <div class="card" style="padding: 3rem;">
+            <div class="card" style="padding: 2rem 4rem;">
                 <h2>Déroulé de l’intervention, 2ème partie</h2>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 2rem; text-align: left;">
@@ -309,7 +327,7 @@
                             <li>Scène narrative</li>
                             <li>Cas réels documentés</li>
                             <li>Mythes déconstruits</li>
-                            <li>Loi RIPOST, protocole d’urgence et pourquoi</li>
+                            <li>Loi RIPOST protocole d’urgence et pourquoi</li>
                         </ul>
                     </div>
                     <div>
@@ -319,11 +337,11 @@
                             <li>Reprendre le contrôle</li>
                             <li>Gestes d’urgence</li>
                             <li>Signaux d’alerte</li>
-                            <li>Ressources : Drogues Info Service, CJC et numéro d’urgence</li>
+                            <li>Ressources : Drogues Info Service, CJC et numero d’urgence</li>
                         </ul>
                     </div>
                 </div>
-                <p style="margin-top: 3rem; font-weight: 800; color: var(--ae-red); font-size: 2rem;">Clôture + Kahoot</p>
+                <p style="margin-top: 2rem; font-weight: 800; color: var(--ae-red); font-size: 2.2rem;">Clôture + Kahoot</p>
             </div>
         </div>
 
@@ -332,11 +350,11 @@
             <h2>Nos formats d’intervention</h2>
             <div style="margin-top: 2rem;">
                 <ul>
-                    <li>Module Puff, <strong>1h30</strong></li>
-                    <li>Module Proto, <strong>1h</strong></li>
-                    <li>Les deux modules, <strong>2h30</strong></li>
+                    <li>Module Puff — 1h30</li>
+                    <li>Module Proto — 1h</li>
+                    <li>Les deux modules — 2h30</li>
                 </ul>
-                <p style="margin-top: 3rem; font-size: 2.2rem;"><strong>Public :</strong> collégiens et lycéens</p>
+                <p style="margin-top: 3rem; font-size: 2.2rem;">Public : collégiens et lycéens</p>
             </div>
         </div>
 
@@ -345,7 +363,7 @@
             <div class="contact-flex">
                 <div>
                     <h2>Contact</h2>
-                    <p style="font-size: 2rem;"><strong>Anass Abdel Rahman</strong></p>
+                    <p style="font-size: 2rem;">Anass Abdel Rahman</p>
                     <p>anassabdelrahman2@gmail.com</p>
                     <p style="color: var(--ae-red); font-weight: 800; font-size: 2rem; margin-top: 1rem;">alerteleves.com</p>
                 </div>
