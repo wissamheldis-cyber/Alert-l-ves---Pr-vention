@@ -50,6 +50,9 @@ export function StudentResources() {
                 <MapPin size={18} className="red" /> CJC
               </div>
               <p style={{ margin: 0, color: "var(--ae-text)" }}>Consultations Jeunes Consommateurs<br/>Sans rendez-vous, sans jugement.</p>
+              <a href="https://addictions-france.org/dispositifs/consultations-jeunes-consommateurs-cjc/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", marginTop: 8, color: "var(--ae-red)", fontWeight: 500, textDecoration: "underline" }}>
+                Trouver une consultation près de chez moi
+              </a>
             </div>
           </div>
         </div>
