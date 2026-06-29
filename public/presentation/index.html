@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation - Alert’Élèves</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+        :root {
+            --bg-color: #0b0b0b;
+            --text-color: #ffffff;
+            --muted-color: rgba(255, 255, 255, 0.7);
+            --red-accent: #e10600;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(225, 6, 0, 0.1), transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(225, 6, 0, 0.05), transparent 40%);
+            color: var(--text-color);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #presentation {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 10%;
+            box-sizing: border-box;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease-in-out, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: scale(0.95) translateY(20px);
+            z-index: 1;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1) translateY(0);
+            z-index: 10;
+        }
+
+        /* Slide Content Styling */
+        h1 {
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            line-height: 1.1;
+            margin: 0 0 1.5rem 0;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+        }
+
+        h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin: 0 0 2rem 0;
+            color: var(--text-color);
+            letter-spacing: -0.03em;
+            font-weight: 600;
+        }
+
+        .red-dot {
+            color: var(--red-accent);
+        }
+
+        p, li {
+            font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            color: var(--muted-color);
+            font-weight: 300;
+        }
+
+        strong {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--red-accent);
+            font-weight: 800;
+        }
+
+        .glass-box {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 3rem;
+            border-radius: 24px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Specific slide tweaks */
+        .title-slide h1 {
+            color: var(--red-accent);
+        }
+        
+        .title-slide p {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .title-slide .date {
+            color: var(--muted-color);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-flex {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .qr-code {
+            background: white;
+            padding: 1rem;
+            border-radius: 16px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 100;
+            display: flex;
+            gap: 1rem;
+            opacity: 0.3;
+            transition: opacity 0.3s;
+        }
+
+        .controls:hover {
+            opacity: 1;
+        }
+
+        .control-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+            transition: background 0.2s;
+        }
+
+        .control-btn:hover {
+            background: rgba(225, 6, 0, 0.8);
+            border-color: rgba(225, 6, 0, 1);
+        }
+
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: var(--red-accent);
+            width: 0%;
+            transition: width 0.3s ease;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-bar" id="progress"></div>
+
+    <div id="presentation">
+        
+        <!-- SLIDE 1 -->
+        <div class="slide title-slide active">
+            <h1>Alert’Élèves<span class="red-dot">.</span></h1>
+            <h2>Prévention des addictions en milieu scolaire</h2>
+            <p><strong>Anass Abdel Rahman</strong> — Fondateur</p>
+            <p class="date">2 juillet 2026</p>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide">
+            <div class="glass-box">
+                <h2>Qui suis-je<span class="red-dot"> ?</span></h2>
+                <p><strong>Anass, 18 ans.</strong></p>
+                <p>À 17 ans, un diagnostic pulmonaire après 3 ans de puff.</p>
+                <p>Mon pneumologue m’explique ce que je consommais vraiment.</p>
+                <p>Ce déclic m’a donné une conviction : <strong>ces informations, tous les jeunes doivent y avoir accès.</strong></p>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide">
+            <h2>Alert’Élèves, c’est quoi<span class="red-dot"> ?</span></h2>
+            <p>Une structure de prévention qui intervient en collèges et lycées en Île-de-France sur les addictions chez les jeunes.</p>
+            <br>
+            <p><strong>Pas de morale. Pas de jugement.</strong></p>
+            <br>
+            <p>Des faits, des données officielles, et une approche pensée pour parler aux élèves — <strong>pas au-dessus d’eux.</strong></p>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide">
+            <div class="glass-box">
+                <h2>Notre approche en 4 piliers<span class="red-dot">.</span></h2>
+                <ul>
+                    <li><strong>Contenu sourcé</strong> (ANSES, OFDT, Inserm, OMS, Sénat)</li>
+                    <li><strong>Interventions interactives</strong> (questions, mises en situation, déconstruction des idées reçues, Kahoot)</li>
+                    <li><strong>Témoignages de professionnels intégrés</strong></li>
+                    <li><strong>Recommandé par la DDEC 92</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide">
+            <h2>Nos partenaires & soutiens<span class="red-dot">.</span></h2>
+            <ul>
+                <li><strong>Pneumologue personnel</strong> — témoignage vidéo confirmé sur les effets pulmonaires de la puff</li>
+                <li><strong>Protoside (association de neurologues)</strong> — en contact pour le volet proto</li>
+                <li><strong>Hôpital Lariboisière et CHU de Lille</strong> — échanges en cours</li>
+                <li><strong>Préfecture de Police</strong> — autorisation d’utiliser leurs vidéos de sensibilisation officielles</li>
+                <li><strong>DDEC 92</strong> — recommandation aux établissements</li>
+            </ul>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide">
+            <div class="glass-box">
+                <h2>Module Puff <span style="font-size: 0.6em; color: var(--muted-color)">(1h30)</span><span class="red-dot">.</span></h2>
+                <p><strong>Public :</strong> collégiens et lycéens</p>
+                <p>Déroulé en 3 actes :</p>
+                <br>
+                <p><strong>Acte 1 — Le cerveau :</strong> dopamine, automatismes, cortex préfrontal, vulnérabilité des ados.</p>
+                <p><strong>Acte 2 — Les faits :</strong> santé (poumons, cœur, cerveau), cadre légal, pression du groupe.</p>
+                <p><strong>Acte 3 — Le marketing :</strong> arômes, ciblage ados, abonnement invisible, environnement.</p>
+                <br>
+                <p><em>Vidéos de professionnels (médecin, policier, commercial) + Kahoot final.</em></p>
+            </div>
+        </div>
+
+        <!-- SLIDE 7 -->
+        <div class="slide">
+            <div class="glass-box">
+                <h2>Module Proto <span style="font-size: 0.6em; color: var(--muted-color)">(1h)</span><span class="red-dot">.</span></h2>
+                <p><strong>Public :</strong> collégiens et lycéens</p>
+                <ul>
+                    <li>Bloc explicatif : N₂O, myéline, dopamine, B12</li>
+                    <li>Scène narrative : parcours de Lucas sur 6 semaines</li>
+                    <li>3 cas réels documentés (Yohan, Pierre, Mathis)</li>
+                    <li>6 mythes déconstruits</li>
+                    <li>Loi RIPOST (Sénat, mai 2026)</li>
+                    <li>Protocole d’urgence (PLS, 15/112)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 8 -->
+        <div class="slide">
+            <h2>Les deux modules <span style="font-size: 0.6em; color: var(--muted-color)">(2h30)</span><span class="red-dot">.</span></h2>
+            <br>
+            <p>L’intervention complète sur les <strong>deux produits les plus consommés par les jeunes aujourd’hui.</strong></p>
+            <br>
+            <p>Transition fluide entre les deux modules.</p>
+            <p>Un seul intervenant, un format interactif du début à la fin.</p>
+        </div>
+
+        <!-- SLIDE 9 -->
+        <div class="slide">
+            <div class="glass-box">
+                <h2>Tarifs d'intervention<span class="red-dot">.</span></h2>
+                <br>
+                <p style="font-size: 3rem; color: white;"><strong>200€</strong> <span style="font-size: 1.5rem; color: var(--muted-color);">/ intervention</span></p>
+                <br>
+                <ul>
+                    <li>Module Puff seul — <strong>1h30</strong></li>
+                    <li>Module Proto seul — <strong>1h</strong></li>
+                    <li>Les deux modules — <strong>2h30</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 10 -->
+        <div class="slide">
+            <div class="contact-flex">
+                <div>
+                    <h2>Contact<span class="red-dot">.</span></h2>
+                    <p><strong>Anass Abdel Rahman</strong></p>
+                    <p>anassabdelrahman2@gmail.com</p>
+                    <p style="color: var(--red-accent); font-weight: 600;">alerteleves.com</p>
+                </div>
+                <div>
+                    <!-- QR Code généré via Google Chart API pointant vers alerteleves.com -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://alerteleves.com&color=0b0b0b&bgcolor=ffffff" alt="QR Code" class="qr-code">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+        <button class="control-btn" id="prevBtn" title="Précédent">&larr;</button>
+        <button class="control-btn" id="nextBtn" title="Suivant">&rarr;</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const progressBar = document.getElementById('progress');
+        let currentSlide = 0;
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            
+            // Update progress bar
+            const progress = ((currentSlide + 1) / slides.length) * 100;
+            progressBar.style.width = progress + '%';
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        // Click anywhere to go to next slide
+        document.getElementById('presentation').addEventListener('click', (e) => {
+            // Prevent if clicking on controls
+            if(!e.target.closest('.controls')) {
+                nextSlide();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                prevSlide();
+            }
+        });
+
+        // Control buttons
+        document.getElementById('nextBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            nextSlide();
+        });
+        
+        document.getElementById('prevBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            prevSlide();
+        });
+
+        // Init
+        updateSlide();
+    </script>
+</body>
+</html>
