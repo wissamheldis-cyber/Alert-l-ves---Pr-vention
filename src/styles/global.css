@@ -339,7 +339,7 @@ h3 {
   border-radius: var(--radius-xl);
   background:
     linear-gradient(90deg, rgba(0,0,0,0.78), rgba(0,0,0,0.04)),
-    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80") center / cover;
+    url("/images/etablissement_accueil.jpg") center / cover;
   border: 1px solid var(--ae-border);
   box-shadow: var(--shadow-card);
 }
