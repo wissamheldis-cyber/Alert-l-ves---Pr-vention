@@ -2,6 +2,7 @@ import { ArrowRight, Building2, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import React, { useState, MouseEvent, useRef } from "react";
+import { Footer } from "../components/Footer";
 
 function ParallaxCard({ to, theme, icon: Icon, title, text, onNavigate }: any) {
   const [transform, setTransform] = useState("perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)");
@@ -95,7 +96,8 @@ export function GatePage() {
   };
 
   return (
-    <main className={`gate animate-fade-in ${exitingTo ? "pointer-events-none" : ""}`}>
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+    <main className={`gate animate-fade-in ${exitingTo ? "pointer-events-none" : ""}`} style={{ flex: 1 }}>
       <Helmet>
         <title>Alert’Élèves - Portail de choix</title>
         <meta name="description" content="Choisissez votre espace Alert’Élèves (Établissements & adultes ou Élèves) pour accéder aux programmes, documents et ressources." />
@@ -137,5 +139,7 @@ export function GatePage() {
         </div>
       )}
     </main>
+    <Footer />
+    </div>
   );
 }
