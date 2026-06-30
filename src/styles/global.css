@@ -361,7 +361,7 @@ h3 {
   border-radius: var(--radius-xl);
   background:
     linear-gradient(90deg, rgba(11, 11, 11, 0.9), rgba(11, 11, 11, 0.15)),
-    url("https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1400&q=80") center / cover;
+    url("/images/eleve_accueil.jpg") center 20% / cover;
   border: 1px solid rgba(255,255,255,.12);
   box-shadow: var(--shadow-card);
 }
