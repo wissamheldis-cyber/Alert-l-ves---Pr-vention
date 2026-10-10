@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import { VantaBackground } from "./components/VantaBackground";
 import { GatePage } from "./pages/GatePage";
 
 import { EstablishmentLayout } from "./layouts/EstablishmentLayout";
@@ -24,7 +25,9 @@ import { PrivacyPolicy } from "./pages/legal/PrivacyPolicy";
 
 export default function App() {
   return (
-    <Routes>
+    <>
+      <VantaBackground />
+      <Routes>
       <Route path="/" element={<GatePage />} />
 
       <Route element={<EstablishmentLayout />}>
@@ -52,6 +55,7 @@ export default function App() {
       </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+      </Routes>
+    </>
   );
 }
