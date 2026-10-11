@@ -9,7 +9,7 @@ export function EstablishmentLayout() {
   const location = useLocation();
   return (
     <div className="app-shell" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
-      <Header nav={establishmentNav} ctaHref="/etablissement/contact" ctaLabel="Demander une intervention" />
+      <Header nav={establishmentNav} />
       <div style={{ flex: 1 }}>
         <AnimatePresence mode="wait">
           <PageTransition key={location.pathname}>

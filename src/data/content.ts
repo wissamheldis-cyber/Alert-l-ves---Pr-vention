@@ -21,20 +21,16 @@ import {
 export const brand = {
   name: "Alert’Élèves",
   signature: "Prévenir - Éduquer - Protéger",
-  founder: "A.M.17",
+  founder: "Anass Abdel Rahman",
   mainModule: "Module 01 - Nouveaux usages à risque"
 };
 
 export const establishmentNav = [
-  { label: "Accueil", href: "/etablissement" },
-  { label: "Interventions", href: "/etablissement/interventions" },
-  { label: "Documents", href: "/etablissement/documents" },
-  { label: "Actualités", href: "/etablissement/actualites" },
-  { label: "Contact", href: "/etablissement/contact" }
+  { label: "Espace élève", href: "/eleve" }
 ];
 
 export const studentNav = [
-  { label: "Accueil", href: "/eleve" },
+  { label: "Accueil", href: "/eleve/accueil" },
   { label: "Ressources", href: "/eleve/ressources" },
   { label: "Quiz", href: "/eleve/quiz-aide" },
   { label: "Aide", href: "/eleve/aide" }

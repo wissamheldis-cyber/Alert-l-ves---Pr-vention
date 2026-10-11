@@ -12,6 +12,7 @@ import { EstablishmentContact } from "./pages/establishment/EstablishmentContact
 
 import { StudentLayout } from "./layouts/StudentLayout";
 import { StudentHome } from "./pages/student/StudentHome";
+import { StudentIntroPage } from "./pages/student/StudentIntroPage";
 import { StudentResources } from "./pages/student/StudentResources";
 import { StudentResourceActive } from "./pages/student/StudentResourceActive";
 import { StudentQuizAid } from "./pages/student/StudentQuizAid";
@@ -39,8 +40,12 @@ export default function App() {
         <Route path="/etablissement/contact" element={<EstablishmentContact />} />
       </Route>
 
+      {/* Page intro / chargement interactive pour les élèves */}
+      <Route path="/eleve" element={<StudentIntroPage />} />
+
+      {/* Plateforme élève complète */}
       <Route element={<StudentLayout />}>
-        <Route path="/eleve" element={<StudentHome />} />
+        <Route path="/eleve/accueil" element={<StudentHome />} />
         <Route path="/eleve/ressources" element={<StudentResources />} />
         <Route path="/eleve/ressources/:id" element={<StudentResourceActive />} />
         <Route path="/eleve/quiz-aide" element={<StudentQuizAid />} />
