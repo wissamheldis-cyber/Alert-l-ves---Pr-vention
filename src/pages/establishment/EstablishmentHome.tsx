@@ -113,7 +113,7 @@ export function EstablishmentHome() {
             display: "flex",
             alignItems: "center",
             padding: "5rem 1.5rem",
-            background: "linear-gradient(135deg, rgba(13,13,13,0.85) 0%, rgba(20,20,20,0.68) 100%), url('/images/etablissement_accueil.jpg') center/cover no-repeat",
+            background: "linear-gradient(135deg, rgba(13,13,13,0.85) 0%, rgba(20,20,20,0.68) 100%), url('/images/class.jpg') center/cover no-repeat",
             borderRadius: "var(--radius-lg, 24px)",
             margin: "1rem auto 3rem",
             overflow: "hidden",
