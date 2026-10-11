@@ -56,7 +56,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "reveal-fade",
     environmentTheme: "black-studio",
-    durationSeconds: 4.5
+    durationSeconds: 3.5
   },
   {
     id: "frame-b",
@@ -82,7 +82,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "mask-dissolve",
     environmentTheme: "black-studio",
-    durationSeconds: 4.5
+    durationSeconds: 3.5
   },
   {
     id: "frame-c",
@@ -108,7 +108,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "spatial-shift",
     environmentTheme: "black-studio",
-    durationSeconds: 5.0
+    durationSeconds: 3.5
   },
   {
     id: "frame-e",
@@ -134,7 +134,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "depth-focus",
     environmentTheme: "black-studio",
-    durationSeconds: 5.5
+    durationSeconds: 3.5
   },
   {
     id: "frame-d",
@@ -160,7 +160,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "mask-dissolve",
     environmentTheme: "black-studio",
-    durationSeconds: 4.5
+    durationSeconds: 3.5
   },
   {
     id: "frame-ef",
@@ -186,7 +186,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "reveal-fade",
     environmentTheme: "black-studio",
-    durationSeconds: 4.0
+    durationSeconds: 3.5
   },
 
   // -------------------------------------------------------------
@@ -216,7 +216,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "mask-dissolve",
     environmentTheme: "studio-to-warm",
-    durationSeconds: 5.5
+    durationSeconds: 3.5
   },
   {
     id: "frame-g",
@@ -242,7 +242,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "spatial-shift",
     environmentTheme: "warm-party",
-    durationSeconds: 5.0
+    durationSeconds: 3.5
   },
 
   // -------------------------------------------------------------
@@ -272,7 +272,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "spatial-shift",
     environmentTheme: "warm-party",
-    durationSeconds: 5.0
+    durationSeconds: 3.5
   },
 
   // -------------------------------------------------------------
@@ -302,7 +302,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "mask-dissolve",
     environmentTheme: "hospital-cold",
-    durationSeconds: 5.0
+    durationSeconds: 3.5
   },
   {
     id: "frame-j",
@@ -328,7 +328,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "depth-focus",
     environmentTheme: "hospital-cold",
-    durationSeconds: 5.5
+    durationSeconds: 3.5
   },
   {
     id: "frame-k",
@@ -354,7 +354,7 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     },
     transitionType: "match-cut",
     environmentTheme: "return-party",
-    durationSeconds: 5.5
+    durationSeconds: 3.5
   }
 ];
 
