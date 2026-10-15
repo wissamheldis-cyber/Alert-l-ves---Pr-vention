@@ -8,7 +8,8 @@ export interface CinematicKeyframe {
   name: string;
   eyebrow: string;
   title: string;
-  narrativeText: string;
+  narrativeText?: string;
+  highlightText?: string;
   insightBadge?: string;
   insightColor?: string;
   focalPoint: { x: number; y: number }; // 0 to 100 percentage
@@ -25,12 +26,11 @@ export interface CinematicKeyframe {
   transitionType: "reveal-fade" | "mask-dissolve" | "spatial-shift" | "match-cut" | "depth-focus";
   environmentTheme: "black-studio" | "studio-to-warm" | "warm-party" | "hospital-cold" | "return-party";
   durationSeconds: number;
-  notes?: string;
 }
 
 export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
   // -------------------------------------------------------------
-  // ACT I — LE STUDIO NOIR : L'OBJET
+  // ACT I — LA PUFF
   // -------------------------------------------------------------
   {
     id: "frame-a",
@@ -38,10 +38,9 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     assetFile: "a.jpg",
     assetSrc: "/assets/intro/a.jpg",
     name: "L'Apparence Initiale",
-    eyebrow: "ACTE I · LA DÉCOUVERTE DU PRODUIT",
+    eyebrow: "LA PUFF · 1/3",
     title: "Elle a l'air inoffensive.",
-    narrativeText: "Un design épuré, des couleurs pastel douces, un format miniature qui se glisse dans la paume. Conçue pour ressembler à un accessoire ludique.",
-    insightBadge: "STUDIO NOIR · VUE INITIALE",
+    insightBadge: "LA PUFF",
     insightColor: "#ff758c",
     focalPoint: { x: 50, y: 50 },
     cameraMotion: {
@@ -64,10 +63,9 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     assetFile: "b.jpg",
     assetSrc: "/assets/intro/b.jpg",
     name: "Révélation Interne",
-    eyebrow: "ACTE I · SOUS LA COQUE",
-    title: "Ce qui se cache à l'intérieur.",
-    narrativeText: "La coque devient translucide. Derrière le plastique coloré apparaît un assemblage industriel : réservoir d'e-liquide, conduit thermique et microprocesseur.",
-    insightBadge: "STRUCTURE INTERNE DÉVOILÉE",
+    eyebrow: "LA PUFF · 2/3",
+    title: "Batterie. Résistance. Nicotine.",
+    insightBadge: "DÉMONTÉE",
     insightColor: "#ff4b4b",
     focalPoint: { x: 50, y: 50 },
     cameraMotion: {
@@ -89,11 +87,10 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     act: "act-1",
     assetFile: "c.jpg",
     assetSrc: "/assets/intro/c.jpg",
-    name: "Vue Éclatée des Composants",
-    eyebrow: "ACTE I · VUE ÉCLATÉE",
-    title: "Batterie. Résistance. Métaux.",
-    narrativeText: "Les pièces s'écartent de l'axe central : accumulateur lithium-ion, résistance métallique chauffée à haute température, solvants chimiques et nicotine hautement dosée.",
-    insightBadge: "DÉCOMPOSITION TECHNIQUE",
+    name: "Vue Éclatée",
+    eyebrow: "LA PUFF · 2/3",
+    title: "Batterie. Résistance. Nicotine.",
+    insightBadge: "EN PIÈCES",
     insightColor: "#f43f5e",
     focalPoint: { x: 50, y: 52 },
     cameraMotion: {
@@ -115,11 +112,11 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     act: "act-1",
     assetFile: "e.jpg",
     assetSrc: "/assets/intro/e.jpg",
-    name: "Comparaison Symbolique de Nicotine",
-    eyebrow: "ACTE I · CHARGE NICOTINIQUE",
-    title: "Une concentration invisible.",
-    narrativeText: "Les sels de nicotine permettent d'inhaler des doses massives sans la brûlure du tabac traditionnel. Le réservoir concentre l'équivalent nicotinique de multiples paquets conventionnels.",
-    insightBadge: "REPRÉSENTATION COMPARATIVE",
+    name: "Équivalence Nicotine",
+    eyebrow: "LA PUFF · 3/3",
+    highlightText: "Plus de 200 cigarettes.",
+    title: "La nicotine d'une puff 16K.",
+    insightBadge: "LE CHOC",
     insightColor: "#e10600",
     focalPoint: { x: 50, y: 50 },
     cameraMotion: {
@@ -141,11 +138,10 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     act: "act-1",
     assetFile: "d.jpg",
     assetSrc: "/assets/intro/d.jpg",
-    name: "Réassemblage des Éléments",
-    eyebrow: "ACTE I · LE RETOUR À L'UNITÉ",
-    title: "Les pièces se reconstituent.",
-    narrativeText: "Chaque composant réintègre sa place. L'embout rejoint le corps, la coque se referme. L'objet reprend son apparence trompeuse d'un seul bloc compact.",
-    insightBadge: "RÉALIGNEMENT D'AXE",
+    name: "Réassemblage",
+    eyebrow: "LA PUFF",
+    title: "Batterie. Résistance. Nicotine.",
+    insightBadge: "RECONSTITUTION",
     insightColor: "#ff758c",
     focalPoint: { x: 50, y: 50 },
     cameraMotion: {
@@ -167,11 +163,10 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     act: "act-1",
     assetFile: "ef.jpg",
     assetSrc: "/assets/intro/ef.jpg",
-    name: "Puff Réassemblée & Stabilisée",
-    eyebrow: "ACTE I · PRÉPARATION AU RÉEL",
-    title: "Intacte. Posée sur la table.",
-    narrativeText: "La puff est de nouveau scellée. Le studio noir commence imperceptiblement à laisser deviner les contours d'une surface physique.",
-    insightBadge: "VUE STABILISÉE",
+    name: "Puff Scellée",
+    eyebrow: "LA PUFF",
+    title: "Elle a l'air inoffensive.",
+    insightBadge: "INTACTE",
     insightColor: "#ffffff",
     focalPoint: { x: 50, y: 50 },
     cameraMotion: {
@@ -190,18 +185,17 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
   },
 
   // -------------------------------------------------------------
-  // ACTE II — LA TRANSITION MAJEURE : LE STUDIO VERS LA SOIRÉE
+  // ACTE II — LA TRANSITION SOIRÉE
   // -------------------------------------------------------------
   {
     id: "frame-f",
     act: "act-2",
     assetFile: "f.jpg",
     assetSrc: "/assets/intro/f.jpg",
-    name: "La Main dans le Cadre",
-    eyebrow: "ACTE II · LA TRANSITION VERS LE RÉEL",
-    title: "Le studio n'était qu'un voile.",
-    narrativeText: "Une main entre dans le champ et s'approche de la puff. Au même instant, le fond noir se dissout : une soirée chaleureuse apparaît en arrière-plan. L'objet était déjà là.",
-    insightBadge: "TRANSITION D'ENVIRONNEMENT",
+    name: "La Main",
+    eyebrow: "LA SOIRÉE",
+    title: "Ça commence entre potes.",
+    insightBadge: "EN SOIRÉE",
     insightColor: "#f59e0b",
     focalPoint: { x: 50, y: 52 },
     cameraMotion: {
@@ -223,11 +217,10 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     act: "act-2",
     assetFile: "g.jpg",
     assetSrc: "/assets/intro/g.jpg",
-    name: "Recul Caméra : La Soirée Dévoilée",
-    eyebrow: "ACTE II · LE CONTEXTE SOCIAL",
-    title: "Le geste partagé.",
-    narrativeText: "La caméra recule. Nous découvrons les visages : un jeune homme prend l'appareil et le tend à une amie. La banalisation s'installe dans le groupe.",
-    insightBadge: "RECUL DE CHAMP · GROUPE",
+    name: "Le Geste",
+    eyebrow: "LA SOIRÉE",
+    title: "On t'a dit que c'était rien.",
+    insightBadge: "LE GROUPE",
     insightColor: "#d97706",
     focalPoint: { x: 48, y: 46 },
     cameraMotion: {
@@ -246,18 +239,17 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
   },
 
   // -------------------------------------------------------------
-  // ACTE III — L'ENVIRONNEMENT SOCIAL ET LE BALLON
+  // ACTE III — LE PROTO
   // -------------------------------------------------------------
   {
     id: "frame-h",
     act: "act-3",
     assetFile: "h.jpg",
     assetSrc: "/assets/intro/h.jpg",
-    name: "La Personne au Ballon",
-    eyebrow: "ACTE III · LE PROTOXYDE D'AZOTE",
+    name: "Le Ballon",
+    eyebrow: "LE PROTO · 1/2",
     title: "Ça commence par un ballon.",
-    narrativeText: "La caméra pivote dans la même pièce vers une jeune femme assise. Entre rires et musique, le protoxyde d'azote semble n'être qu'un jeu de soirée anodin.",
-    insightBadge: "DÉVIATION D'ATTENTION",
+    insightBadge: "LE PROTO",
     insightColor: "#a855f7",
     focalPoint: { x: 52, y: 48 },
     cameraMotion: {
@@ -276,18 +268,17 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
   },
 
   // -------------------------------------------------------------
-  // ACTE IV — BASCULE HOSPITALIÈRE & RETOUR MATCH-CUT
+  // ACTE IV — L'HÔPITAL & LE PTC
   // -------------------------------------------------------------
   {
     id: "frame-i",
     act: "act-4",
     assetFile: "i.jpg",
     assetSrc: "/assets/intro/i.jpg",
-    name: "Basculement de l'Atmosphère",
-    eyebrow: "ACTE IV · TRANSFORMATION CINÉMATIQUE",
-    title: "L'atmosphère s'inverse.",
-    narrativeText: "La caméra contourne le sujet par l'arrière. Les néons chaleureux s'éteignent. La silhouette reste la même, mais les murs deviennent un couloir clinique froid.",
-    insightBadge: "PIVOT CONTINU · SILHOUETTE",
+    name: "La Bascule",
+    eyebrow: "LE PROTO · 2/2",
+    title: "Ça peut finir sans pouvoir marcher.",
+    insightBadge: "LES RISQUES",
     insightColor: "#0284c7",
     focalPoint: { x: 50, y: 50 },
     cameraMotion: {
@@ -309,11 +300,10 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     act: "act-4",
     assetFile: "j.jpg",
     assetSrc: "/assets/intro/j.jpg",
-    name: "La Pause Clinique",
-    eyebrow: "ACTE IV · LA VULNÉRABILITÉ DU CORPS",
-    title: "Quand les nerfs lâchent.",
-    narrativeText: "Assise dans un fauteuil roulant, elle tourne lentement le visage. Les atteintes neurologiques et la perte de motricité ne sont pas une fiction.",
-    insightBadge: "RAPPROCHÉ CLINIQUE",
+    name: "L'Hôpital",
+    eyebrow: "LE PROTO · 2/2",
+    title: "Ça peut finir sans pouvoir marcher.",
+    insightBadge: "SÉQUELLES",
     insightColor: "#0070f3",
     focalPoint: { x: 50, y: 44 },
     cameraMotion: {
@@ -335,12 +325,12 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     act: "act-4",
     assetFile: "k.jpg",
     assetSrc: "/assets/intro/k.jpg",
-    name: "Refocalisation Finale & Deuxième Appareil",
-    eyebrow: "ACTE IV · LE RETOUR AU PRÉSENT",
+    name: "Le PTC",
+    eyebrow: "LE PTC",
     title: "On t'a dit que c'était comme une puff.",
-    narrativeText: "Retour instantané dans la pièce. La caméra refait le point sur une autre jeune femme au fond : un liquide synthétique inconnu, une vapeur pâle, un risque immédiat.",
-    insightBadge: "MATCH-CUT · REFOCALISATION",
-    insightColor: "#10b981",
+    highlightText: "Une taffe. Les urgences.",
+    insightBadge: "LE PTC",
+    insightColor: "#e10600",
     focalPoint: { x: 48, y: 48 },
     cameraMotion: {
       startScale: 1.08,

@@ -374,7 +374,7 @@ export function StudentIntroPage() {
 
               <h2
                 style={{
-                  fontSize: "clamp(1.7rem, 4.5vw, 2.2rem)",
+                  fontSize: "clamp(1.7rem, 4.5vw, 2.3rem)",
                   fontWeight: 900,
                   letterSpacing: "-0.04em",
                   lineHeight: 1.15,
@@ -385,8 +385,8 @@ export function StudentIntroPage() {
                 Maintenant tu sais<span style={{ color: "var(--ae-red, #e10600)" }}>.</span>
               </h2>
 
-              <p style={{ fontSize: "1.05rem", color: "rgba(255,255,255,0.78)", marginBottom: "2rem", lineHeight: 1.5 }}>
-                Le reste, c'est toi qui décides. Accède aux ressources pour t'informer, tester tes réflexes ou trouver de l'aide.
+              <p style={{ fontSize: "1.2rem", color: "rgba(255,255,255,0.85)", marginBottom: "2rem", lineHeight: 1.5, fontWeight: 500 }}>
+                Le reste, c'est toi qui décides.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "10px", width: "100%" }}>
@@ -400,8 +400,8 @@ export function StudentIntroPage() {
                     color: "#ffffff",
                     border: "1px solid rgba(255,255,255,0.22)",
                     borderRadius: "14px",
-                    padding: "13px 18px",
-                    fontSize: "0.95rem",
+                    padding: "14px 20px",
+                    fontSize: "1rem",
                     fontWeight: 700,
                     cursor: "pointer",
                     display: "flex",
@@ -412,7 +412,7 @@ export function StudentIntroPage() {
                 >
                   <span style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                     <BookOpen size={18} style={{ color: "var(--ae-red)" }} />
-                    En savoir plus (Les dossiers)
+                    Aller plus loin
                   </span>
                   <ChevronRight size={18} />
                 </button>
@@ -427,8 +427,8 @@ export function StudentIntroPage() {
                     color: "#ffffff",
                     border: "none",
                     borderRadius: "14px",
-                    padding: "14px 18px",
-                    fontSize: "0.98rem",
+                    padding: "15px 20px",
+                    fontSize: "1.05rem",
                     fontWeight: 800,
                     cursor: "pointer",
                     display: "flex",
@@ -452,11 +452,11 @@ export function StudentIntroPage() {
                   }}
                   style={{
                     background: "transparent",
-                    color: "rgba(255,255,255,0.8)",
-                    border: "1px solid rgba(255,255,255,0.16)",
+                    color: "rgba(255,255,255,0.85)",
+                    border: "1px solid rgba(255,255,255,0.18)",
                     borderRadius: "14px",
-                    padding: "12px 18px",
-                    fontSize: "0.92rem",
+                    padding: "13px 20px",
+                    fontSize: "0.95rem",
                     fontWeight: 600,
                     cursor: "pointer",
                     display: "flex",
@@ -466,7 +466,7 @@ export function StudentIntroPage() {
                 >
                   <span style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                     <HelpCircle size={18} />
-                    Besoin d'en parler ou d'aider un ami
+                    Besoin d'en parler ?
                   </span>
                   <ChevronRight size={16} />
                 </button>
@@ -507,7 +507,7 @@ export function StudentIntroPage() {
                 reducedMotion={reducedMotion}
               />
 
-              {/* Texte sous l'image */}
+              {/* Texte sous l'image : Punchlines validées */}
               <div
                 key={currentFrame.id}
                 className="cinematic-text-fade"
@@ -518,30 +518,48 @@ export function StudentIntroPage() {
                   padding: "0 12px"
                 }}
               >
+                {currentFrame.highlightText && (
+                  <div
+                    style={{
+                      fontSize: "clamp(2rem, 5.5vw, 3rem)",
+                      fontWeight: 900,
+                      color: "var(--ae-red, #e10600)",
+                      lineHeight: 1.1,
+                      letterSpacing: "-0.04em",
+                      marginBottom: "6px",
+                      textShadow: "0 0 25px rgba(225, 6, 0, 0.45)"
+                    }}
+                  >
+                    {currentFrame.highlightText}
+                  </div>
+                )}
+
                 <h2
                   style={{
-                    fontSize: "clamp(1.4rem, 4vw, 1.95rem)",
+                    fontSize: currentFrame.highlightText ? "clamp(1.3rem, 3.5vw, 1.8rem)" : "clamp(1.6rem, 4.8vw, 2.3rem)",
                     fontWeight: 900,
                     letterSpacing: "-0.035em",
                     lineHeight: 1.15,
-                    margin: "0 0 8px",
+                    margin: 0,
                     color: "#ffffff"
                   }}
                 >
                   {currentFrame.title}
                 </h2>
 
-                <p
-                  style={{
-                    fontSize: "clamp(0.92rem, 2.2vw, 1.05rem)",
-                    color: "rgba(255,255,255,0.75)",
-                    lineHeight: 1.55,
-                    margin: "0 auto",
-                    maxWidth: "460px"
-                  }}
-                >
-                  {currentFrame.narrativeText}
-                </p>
+                {currentFrame.narrativeText && (
+                  <p
+                    style={{
+                      fontSize: "clamp(0.95rem, 2.2vw, 1.1rem)",
+                      color: "rgba(255,255,255,0.78)",
+                      lineHeight: 1.5,
+                      margin: "8px auto 0",
+                      maxWidth: "460px"
+                    }}
+                  >
+                    {currentFrame.narrativeText}
+                  </p>
+                )}
               </div>
             </>
           )}
