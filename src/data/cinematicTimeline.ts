@@ -1,4 +1,4 @@
-export type ActId = "act-1" | "act-2" | "act-3" | "act-4" | "conclusion";
+export type ActId = "puff" | "proto" | "ptc";
 
 export interface CinematicKeyframe {
   id: string;
@@ -8,7 +8,7 @@ export interface CinematicKeyframe {
   name: string;
   eyebrow: string;
   title: string;
-  narrativeText?: string;
+  subtitle?: string;
   highlightText?: string;
   insightBadge?: string;
   insightColor?: string;
@@ -16,11 +16,11 @@ export interface CinematicKeyframe {
   cameraMotion: {
     startScale: number;
     endScale: number;
-    startX: number; // percentage translate
+    startX: number;
     endX: number;
     startY: number;
     endY: number;
-    startRotate: number; // deg
+    startRotate: number;
     endRotate: number;
   };
   transitionType: "reveal-fade" | "mask-dissolve" | "spatial-shift" | "match-cut" | "depth-focus";
@@ -29,17 +29,20 @@ export interface CinematicKeyframe {
 }
 
 export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
-  // -------------------------------------------------------------
-  // ACT I — LA PUFF
-  // -------------------------------------------------------------
+  // =============================================================
+  // 1. LA PUFF (3 écrans clés du client)
+  // =============================================================
+
+  // Écran 1 · a.jpg : Puff pastel, mignonne
   {
-    id: "frame-a",
-    act: "act-1",
+    id: "puff-1",
+    act: "puff",
     assetFile: "a.jpg",
     assetSrc: "/assets/intro/a.jpg",
-    name: "L'Apparence Initiale",
+    name: "La Puff",
     eyebrow: "LA PUFF · 1/3",
     title: "Elle a l'air inoffensive.",
+    subtitle: "Parfum bonbon, couleurs pastel, format poche.",
     insightBadge: "LA PUFF",
     insightColor: "#ff758c",
     focalPoint: { x: 50, y: 50 },
@@ -57,45 +60,23 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     environmentTheme: "black-studio",
     durationSeconds: 3.5
   },
+
+  // Écran 2 · c.jpg : Puff démontée, pièces qui flottent
   {
-    id: "frame-b",
-    act: "act-1",
-    assetFile: "b.jpg",
-    assetSrc: "/assets/intro/b.jpg",
-    name: "Révélation Interne",
-    eyebrow: "LA PUFF · 2/3",
-    title: "Batterie. Résistance. Nicotine.",
-    insightBadge: "DÉMONTÉE",
-    insightColor: "#ff4b4b",
-    focalPoint: { x: 50, y: 50 },
-    cameraMotion: {
-      startScale: 1.05,
-      endScale: 1.12,
-      startX: 0,
-      endX: 0.5,
-      startY: -1,
-      endY: -2,
-      startRotate: 0.5,
-      endRotate: -0.5
-    },
-    transitionType: "mask-dissolve",
-    environmentTheme: "black-studio",
-    durationSeconds: 3.5
-  },
-  {
-    id: "frame-c",
-    act: "act-1",
+    id: "puff-2",
+    act: "puff",
     assetFile: "c.jpg",
     assetSrc: "/assets/intro/c.jpg",
-    name: "Vue Éclatée",
+    name: "Puff démontée",
     eyebrow: "LA PUFF · 2/3",
     title: "Batterie. Résistance. Nicotine.",
-    insightBadge: "EN PIÈCES",
-    insightColor: "#f43f5e",
+    subtitle: "Un circuit électronique, des métaux chauffés, un solvant chimique.",
+    insightBadge: "DÉMONTÉE",
+    insightColor: "#ff4b4b",
     focalPoint: { x: 50, y: 52 },
     cameraMotion: {
       startScale: 1.02,
-      endScale: 1.08,
+      endScale: 1.09,
       startX: -1,
       endX: 1,
       startY: 0,
@@ -107,15 +88,18 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     environmentTheme: "black-studio",
     durationSeconds: 3.5
   },
+
+  // Écran 3 · e.jpg : Chiffre géant en rouge + 200 cigarettes
   {
-    id: "frame-e",
-    act: "act-1",
+    id: "puff-3",
+    act: "puff",
     assetFile: "e.jpg",
     assetSrc: "/assets/intro/e.jpg",
-    name: "Équivalence Nicotine",
+    name: "Nicotine 16K",
     eyebrow: "LA PUFF · 3/3",
     highlightText: "Plus de 200 cigarettes.",
     title: "La nicotine d'une puff 16K.",
+    subtitle: "Autant de nicotine que 10 paquets entiers dans une seule fiole.",
     insightBadge: "LE CHOC",
     insightColor: "#e10600",
     focalPoint: { x: 50, y: 50 },
@@ -133,122 +117,21 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     environmentTheme: "black-studio",
     durationSeconds: 3.5
   },
-  {
-    id: "frame-d",
-    act: "act-1",
-    assetFile: "d.jpg",
-    assetSrc: "/assets/intro/d.jpg",
-    name: "Réassemblage",
-    eyebrow: "LA PUFF",
-    title: "Batterie. Résistance. Nicotine.",
-    insightBadge: "RECONSTITUTION",
-    insightColor: "#ff758c",
-    focalPoint: { x: 50, y: 50 },
-    cameraMotion: {
-      startScale: 1.07,
-      endScale: 1.02,
-      startX: 0.5,
-      endX: 0,
-      startY: -1.5,
-      endY: 0,
-      startRotate: 0.3,
-      endRotate: 0
-    },
-    transitionType: "mask-dissolve",
-    environmentTheme: "black-studio",
-    durationSeconds: 3.5
-  },
-  {
-    id: "frame-ef",
-    act: "act-1",
-    assetFile: "ef.jpg",
-    assetSrc: "/assets/intro/ef.jpg",
-    name: "Puff Scellée",
-    eyebrow: "LA PUFF",
-    title: "Elle a l'air inoffensive.",
-    insightBadge: "INTACTE",
-    insightColor: "#ffffff",
-    focalPoint: { x: 50, y: 50 },
-    cameraMotion: {
-      startScale: 1.0,
-      endScale: 1.05,
-      startX: 0,
-      endX: 0,
-      startY: 0,
-      endY: 1,
-      startRotate: 0,
-      endRotate: -0.2
-    },
-    transitionType: "reveal-fade",
-    environmentTheme: "black-studio",
-    durationSeconds: 3.5
-  },
 
-  // -------------------------------------------------------------
-  // ACTE II — LA TRANSITION SOIRÉE
-  // -------------------------------------------------------------
-  {
-    id: "frame-f",
-    act: "act-2",
-    assetFile: "f.jpg",
-    assetSrc: "/assets/intro/f.jpg",
-    name: "La Main",
-    eyebrow: "LA SOIRÉE",
-    title: "Ça commence entre potes.",
-    insightBadge: "EN SOIRÉE",
-    insightColor: "#f59e0b",
-    focalPoint: { x: 50, y: 52 },
-    cameraMotion: {
-      startScale: 1.02,
-      endScale: 1.08,
-      startX: 0,
-      endX: -1,
-      startY: 1,
-      endY: 0,
-      startRotate: -0.2,
-      endRotate: 0.3
-    },
-    transitionType: "mask-dissolve",
-    environmentTheme: "studio-to-warm",
-    durationSeconds: 3.5
-  },
-  {
-    id: "frame-g",
-    act: "act-2",
-    assetFile: "g.jpg",
-    assetSrc: "/assets/intro/g.jpg",
-    name: "Le Geste",
-    eyebrow: "LA SOIRÉE",
-    title: "On t'a dit que c'était rien.",
-    insightBadge: "LE GROUPE",
-    insightColor: "#d97706",
-    focalPoint: { x: 48, y: 46 },
-    cameraMotion: {
-      startScale: 1.1,
-      endScale: 1.0,
-      startX: 2,
-      endX: 0,
-      startY: 2,
-      endY: 0,
-      startRotate: 0.3,
-      endRotate: 0
-    },
-    transitionType: "spatial-shift",
-    environmentTheme: "warm-party",
-    durationSeconds: 3.5
-  },
+  // =============================================================
+  // 2. LE PROTO (2 écrans clés du client)
+  // =============================================================
 
-  // -------------------------------------------------------------
-  // ACTE III — LE PROTO
-  // -------------------------------------------------------------
+  // Écran 4 · h.jpg : Soirée, ballons colorés, néons
   {
-    id: "frame-h",
-    act: "act-3",
+    id: "proto-1",
+    act: "proto",
     assetFile: "h.jpg",
     assetSrc: "/assets/intro/h.jpg",
     name: "Le Ballon",
     eyebrow: "LE PROTO · 1/2",
     title: "Ça commence par un ballon.",
+    subtitle: "Entre potes, un fou rire de 30 secondes en soirée.",
     insightBadge: "LE PROTO",
     insightColor: "#a855f7",
     focalPoint: { x: 52, y: 48 },
@@ -262,48 +145,22 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
       startRotate: 0,
       endRotate: 0.4
     },
-    transitionType: "spatial-shift",
+    transitionType: "mask-dissolve",
     environmentTheme: "warm-party",
     durationSeconds: 3.5
   },
 
-  // -------------------------------------------------------------
-  // ACTE IV — L'HÔPITAL & LE PTC
-  // -------------------------------------------------------------
+  // Écran 5 · j.jpg : Couloir d'hôpital, fauteuil roulant
   {
-    id: "frame-i",
-    act: "act-4",
-    assetFile: "i.jpg",
-    assetSrc: "/assets/intro/i.jpg",
-    name: "La Bascule",
-    eyebrow: "LE PROTO · 2/2",
-    title: "Ça peut finir sans pouvoir marcher.",
-    insightBadge: "LES RISQUES",
-    insightColor: "#0284c7",
-    focalPoint: { x: 50, y: 50 },
-    cameraMotion: {
-      startScale: 1.04,
-      endScale: 1.1,
-      startX: 0,
-      endX: 1,
-      startY: -1,
-      endY: -2,
-      startRotate: 0.4,
-      endRotate: -0.3
-    },
-    transitionType: "mask-dissolve",
-    environmentTheme: "hospital-cold",
-    durationSeconds: 3.5
-  },
-  {
-    id: "frame-j",
-    act: "act-4",
+    id: "proto-2",
+    act: "proto",
     assetFile: "j.jpg",
     assetSrc: "/assets/intro/j.jpg",
     name: "L'Hôpital",
     eyebrow: "LE PROTO · 2/2",
     title: "Ça peut finir sans pouvoir marcher.",
-    insightBadge: "SÉQUELLES",
+    subtitle: "Atteintes neurologiques sévères, perte de motricité.",
+    insightBadge: "LES RISQUES",
     insightColor: "#0070f3",
     focalPoint: { x: 50, y: 44 },
     cameraMotion: {
@@ -320,16 +177,51 @@ export const CINEMATIC_TIMELINE: CinematicKeyframe[] = [
     environmentTheme: "hospital-cold",
     durationSeconds: 3.5
   },
+
+  // =============================================================
+  // 3. LE PTC (2 écrans clés du client)
+  // =============================================================
+
+  // Écran 6 · f.jpg : Vapoteuse qui passe de main en main en soirée
   {
-    id: "frame-k",
-    act: "act-4",
+    id: "ptc-1",
+    act: "ptc",
+    assetFile: "f.jpg",
+    assetSrc: "/assets/intro/f.jpg",
+    name: "Vapoteuse modifiée",
+    eyebrow: "LE PTC · 1/2",
+    title: "On t'a dit que c'était comme une puff.",
+    subtitle: "« Pète Ton Crâne » : un liquide synthétique inconnu dans un réservoir.",
+    insightBadge: "LE PTC",
+    insightColor: "#9333ea",
+    focalPoint: { x: 50, y: 52 },
+    cameraMotion: {
+      startScale: 1.02,
+      endScale: 1.08,
+      startX: 0,
+      endX: -1,
+      startY: 1,
+      endY: 0,
+      startRotate: -0.2,
+      endRotate: 0.3
+    },
+    transitionType: "mask-dissolve",
+    environmentTheme: "warm-party",
+    durationSeconds: 3.5
+  },
+
+  // Écran 7 · k.jpg : Une taffe. Les urgences.
+  {
+    id: "ptc-2",
+    act: "ptc",
     assetFile: "k.jpg",
     assetSrc: "/assets/intro/k.jpg",
-    name: "Le PTC",
-    eyebrow: "LE PTC",
-    title: "On t'a dit que c'était comme une puff.",
-    highlightText: "Une taffe. Les urgences.",
-    insightBadge: "LE PTC",
+    name: "Les Urgences",
+    eyebrow: "LE PTC · 2/2",
+    highlightText: "Une taffe.",
+    title: "Les urgences.",
+    subtitle: "Convulsions, perte de conscience brutale, coma.",
+    insightBadge: "DANGER IMMÉDIAT",
     insightColor: "#e10600",
     focalPoint: { x: 48, y: 48 },
     cameraMotion: {

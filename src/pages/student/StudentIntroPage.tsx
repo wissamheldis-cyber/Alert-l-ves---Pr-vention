@@ -547,7 +547,7 @@ export function StudentIntroPage() {
                   {currentFrame.title}
                 </h2>
 
-                {currentFrame.narrativeText && (
+                {currentFrame.subtitle && (
                   <p
                     style={{
                       fontSize: "clamp(0.95rem, 2.2vw, 1.1rem)",
@@ -557,7 +557,7 @@ export function StudentIntroPage() {
                       maxWidth: "460px"
                     }}
                   >
-                    {currentFrame.narrativeText}
+                    {currentFrame.subtitle}
                   </p>
                 )}
               </div>
