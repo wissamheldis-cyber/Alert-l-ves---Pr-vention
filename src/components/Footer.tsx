@@ -27,7 +27,7 @@ export function Footer() {
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>Portail principal</Link>
               <Link to="/etablissement" style={{ color: "inherit", textDecoration: "none" }}>Espace Établissement</Link>
-              <Link to="/eleve" style={{ color: "inherit", textDecoration: "none" }}>Espace Élève</Link>
+              <Link to="/eleve/accueil" style={{ color: "inherit", textDecoration: "none" }}>Espace Élève</Link>
             </div>
           </div>
 

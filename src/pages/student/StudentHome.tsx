@@ -65,31 +65,7 @@ export function StudentHome() {
           
           {/* Colonne gauche : Titre & Actions principales */}
           <div className="hero-content" style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1rem" }}>
-              <p className="kicker" style={{ margin: 0 }}>Espace élèves</p>
-              <Link
-                to="/eleve"
-                style={{
-                  background: "rgba(225, 6, 0, 0.08)",
-                  border: "1px solid rgba(225, 6, 0, 0.25)",
-                  color: "var(--ae-red, #e10600)",
-                  borderRadius: "999px",
-                  padding: "5px 14px",
-                  fontSize: "0.8rem",
-                  fontWeight: 700,
-                  cursor: "pointer",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "6px",
-                  textDecoration: "none",
-                  transition: "all 0.2s ease"
-                }}
-              >
-                <Play size={12} />
-                <span>Revoir l'intro</span>
-              </Link>
-            </div>
-
+            <p className="kicker" style={{ marginBottom: "1rem" }}>Espace élèves</p>
             <h1>
               Ici, tu t’informes, tu comprends et tu passes à l’action<span className="red-dot">.</span>
             </h1>

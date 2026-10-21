@@ -26,7 +26,7 @@ export const brand = {
 };
 
 export const establishmentNav = [
-  { label: "Espace élève", href: "/eleve" }
+  { label: "Espace élève", href: "/eleve/accueil" }
 ];
 
 export const studentNav = [

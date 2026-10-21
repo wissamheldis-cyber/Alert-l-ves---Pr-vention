@@ -123,7 +123,7 @@ export function GatePage() {
             onNavigate={handleNavigate}
           />
           <ParallaxCard
-            to="/eleve"
+            to="/eleve/accueil"
             theme="white"
             icon={Users}
             title="Espace élèves"
